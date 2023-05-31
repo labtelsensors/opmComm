@@ -3,10 +3,9 @@
 ###
 
 1. [Installation](#installation)
-2. [Project Motivation](#motivation)
-3. [Code Description](#files)
-4. [Future Work](#results)
-5. [Licensing, Authors, and Acknowledgements](#licensing)
+2. [Code Description](#files)
+3. [Future Work](#results)
+4. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## Installation
 
