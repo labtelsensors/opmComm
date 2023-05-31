@@ -29,8 +29,6 @@ TODO list:
  
 Feel free to push your contributions to our repository!
 
-These are complicated questions, indeed. The main goal is not to obtain an ultimate conclusion, but to play around with data and have a look at its behaviour. 
-
 ## Licensing, Authors, Acknowledgements
 
 Feel free to use the code here as you would like!
