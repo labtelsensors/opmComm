@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>全尺寸，主波长和其他比较显示测试光纤波长的光时域反射图。各主要波长下图显示的事件表。这份报告为每个生成每个波长的页面。</HelpText>
+		</PageSettings>
+		
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="Multiple Trace Summary.xml" />
+		<Template FileName="Multiple OTDR Events.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

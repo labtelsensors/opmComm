@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="TIA-568-C-HORIZ"
+		  TestPort="Multimode"
+		  Units="dB"
+		  LossThreshType="TotalLoss"
+		  Description="TIA/EIA-568-C, horizontal cables, 50 or 62.5 μm fiber."
+		  UseType="Horiz"
+		  CatType="TIA"
+		  Rev="C"
+		  StdType="Cabling" Version="1.0.1">
+		<LossThreshold WL="850"
+					   Min="0"
+					   Max="2"></LossThreshold>
+		<LossThreshold WL="1300"
+					   Min="0"
+					   Max="2"></LossThreshold>
+		<MaxLength Units="Meters">90</MaxLength>
+	</Rule>
+</Rules>

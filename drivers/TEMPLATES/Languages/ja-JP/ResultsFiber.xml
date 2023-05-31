@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="5,20,5,5">
+			<Label Alignment="HorizCenter" Text="光ファイバの概要" ID="0" FontSize="36" />
+		</Div>
+		<Div Conditional="HasTrace" Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+			<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.SinglemodeTraces.Count>1 AND OTDRInfo.MultimodeTraces.Count>1">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray">
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Label Text="波長：" ID="1" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Single" FontSize="20" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Label Text="波長：" ID="2" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="1" Field="Wavelength" FiberType="Single" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top">
+					<TraceGraph FiberType="Single" Index="0" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+					<TraceGraph FiberType="Single" Index="1" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray">
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Label Text="波長：" ID="3" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Multi" FontSize="20" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Label Text="波長：" ID="4" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="1" Field="Wavelength" FiberType="Multi" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top">
+					<TraceGraph FiberType="Multi" Index="0" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+					<TraceGraph FiberType="Multi" Index="1" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.SinglemodeTraces.Count>0 AND OTDRInfo.MultimodeTraces.Count=0">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count>1">
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Label Text="波長：" ID="5" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Single" FontSize="20" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Label Text="波長：" ID="6" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="1" Field="Wavelength" FiberType="Single" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count=1">
+					<Div Positioning="Percentage" Alignment="Left" Width="100">
+						<Label Text="波長：" ID="7" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Single" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.Traces.Count>1">
+					<TraceGraph FiberType="Single" Index="0" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+					<TraceGraph FiberType="Single" Index="1" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.Traces.Count=1">
+					<TraceGraph FiberType="Single" Index="0" Positioning="Percentage" Alignment="Left" Width="100" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count>1">
+					<TraceEventTable FiberType="Single" Index="0" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"/>
+					<TraceEventTable FiberType="Single" Index="1" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"/>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count=1">
+					<TraceEventTable FiberType="Single" Index="0" Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5"/>
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.SinglemodeTraces.Count=0 AND OTDRInfo.MultimodeTraces.Count>0">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count>1">
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Label Text="波長：" ID="8" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Multi" FontSize="20" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Label Text="波長：" ID="9" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="1" Field="Wavelength" FiberType="Multi" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count=1">
+					<Div Positioning="Percentage" Alignment="Left" Width="100">
+						<Label Text="波長：" ID="10" Alignment="Left" FontSize="20" />
+						<Data DataSource="OTDRInfo" Index="0" Field="Wavelength" FiberType="Multi" FontSize="20" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.Traces.Count>1">
+					<TraceGraph FiberType="Multi" Index="0" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+					<TraceGraph FiberType="Multi" Index="1" Positioning="Percentage" Alignment="Left" Width="50" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Conditional="OTDRInfo.Traces.Count=1">
+					<TraceGraph FiberType="Multi" Index="0" Positioning="Percentage" Alignment="Left" Width="100" MaxHeight="80" Padding="5,5,5,5"  />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count>1">
+					<TraceEventTable FiberType="Multi" Index="0" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"/>
+					<TraceEventTable FiberType="Multi" Index="1" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"/>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.Traces.Count=1">
+					<TraceEventTable FiberType="Multi" Index="0" Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5"/>
+				</Div>
+			</Div>
+		</Div>
+		<Div Conditional="HasOPM" Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="OLTS / OPMの結果：" ID="11" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSOPMResults" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="OLTSファイバ読みこみ：" ID="12" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSFibers" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="OPMのファイバ読みこみ：" ID="13" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OPMFibers" FontSize="20" />
+				</Div>
+			</Div>
+		</Div>
+		<Div Conditional="HasImage" Positioning="Content" Alignment="Top" Padding="5,15,5,5" MaxHeight="20" >
+			<Div Alignment="Left" Positioning="Percentage" Width="50" Padding="5,5,5,5" Conditional="HasImageAZ">
+				<Div Alignment="Center" Positioning="Content">
+					<Label Text="ファイバーエンド画像" ID="0" Alignment="Top" FontSize="20" />
+					<Data DataSource="ImageInfo" Alignment="Top" Field="EndAZ" FontSize="16"/>
+					<ImageElement Index="0" Sizing="FixedAspect" Alignment="Top" Section="AZ"/>
+				</Div>
+			</Div>
+			<Div Alignment="Left" Positioning="Percentage" Width="50" Padding="5,5,5,5" Conditional="HasImageZA">
+				<Div Alignment="Center" Positioning="Content">
+					<Label Text="ファイバーエンド画像" ID="1" Alignment="Top" FontSize="20" />
+					<Data DataSource="ImageInfo" Alignment="Top" Field="EndZA" FontSize="16"/>
+					<ImageElement Index="0" Sizing="FixedAspect" Alignment="Top" Section="ZA"/>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

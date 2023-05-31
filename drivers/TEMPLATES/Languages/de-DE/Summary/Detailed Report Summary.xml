@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="1" Padding="40,40,40,40">
+
+			<Div Positioning="Content" Alignment="Top" >
+
+				<Div Positioning="Percentage" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+						<Label Text="Projekübers." ID="0" FontSize="24" Alignment="VertCenter" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0" Conditional="Settings.ProjectJobName.Length>0">
+					<Div Positioning="Percentage" Alignment="Left" Width="100"  BorderStyle="OuterRadius" Forecolor="LightGray"  >
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" >
+							<Div Positioning="Content" Alignment="Top" >
+								<Label Alignment="Left" Text="Job-Name:" ID="1" Positioning="Percentage" Width="29" FontSize="20" />
+								<Data Alignment="Left" DataSource="Settings" Field="ProjectJobName" Wrap="True" FontSize="20" />
+							</Div>
+							<Div Positioning="Content" Alignment="Top"  >
+								<Div Positioning="Content" Alignment="Left"  >
+									<Template FileName="ProjectSummary.xml"  />
+								</Div>
+							</Div>
+						</Div>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0"  >
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray"  >
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+							<Label Alignment="Left" Text="Erg.-Übers." ID="2" FontSize="14" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="30,10,10,10" >
+							<Template FileName="ResultsColumns.xml" Alignment="Left" />
+						</Div>
+
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray"  Conditional="Settings.CustomerSectionTitle.Length>0">
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+							<Data Alignment="Left" DataSource="Settings" Field="CustomerSectionTitle" FontSize="14" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="30,10,10,10"  Conditional="Settings.IncludeCustomerInfo=True">
+							<Div Positioning="Content" Alignment="Left" >
+								<Template FileName="CustomerSummary.xml"  />
+							</Div>
+						</Div>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.PreparerSectionTitle.Length>0">
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" >
+							<Data Alignment="Left" DataSource="Settings" Field="PreparerSectionTitle" FontSize="14" />
+						</Div >
+
+						<Div Positioning="Content" Alignment="Top" Padding="30,10,10,10" Conditional="Settings.IncludePreparerInfo=True" >
+							<Div Positioning="Content" Alignment="Left" >
+								<Template FileName="PreparerSummary.xml" />
+							</Div>
+						</Div>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,0" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.ConsultantSectionTitle.Length>0">
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" >
+							<Data Alignment="Left" DataSource="Settings" Field="ConsultantSectionTitle" FontSize="14" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="30,10,10,10" >
+							<Div Positioning="Content" Alignment="Left" Conditional="Settings.IncludeConsultantInfo=True">
+								<Template FileName="ConsultantSummary.xml" />
+							</Div>
+						</Div>
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Height="6" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray"  >
+				<Div Positioning="Content" Alignment="HorizCenter" Width="100" Padding="5,5,5,5" >
+					<Template FileName="AFLNoyesBlock.xml" Padding="5,5,5,5" />
+				</Div>
+			</Div>
+
+		</Div>
+
+	</Body>
+</Template>

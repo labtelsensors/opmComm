@@ -1,0 +1,48 @@
+; appSettings
+
+[Model]
+ModelType = C850
+ModelName = C850
+ShowSplashMessages = true
+
+[Fan]
+FanOn = true
+
+[AutoTest]
+Display = true
+DisplayIndex = 5
+
+[OLS]
+Display = true
+DisplayIndex = 6
+
+[OPM]
+Display = false
+OPMType = COPM_Digital1
+DisplayIndex = 10
+
+[OTDR]
+Display = true
+DisplayDSPDebug = true
+DisplayIndex = 1,2,3
+
+[VFS]
+Display = true
+DisplayIndex = 4
+ZoneEnabled = true
+FeaturesEnabled = true
+ToggleEnabled = false
+AnalysisEnabled = false
+MicronToPixel = 0.00245
+
+[Settings]
+Shutdown = 1
+CeTimeout = 15000
+
+[VFSEditableFeatures]
+Contrast = true
+Sharpness = true
+
+[VFSZones]
+singlemode = 25:-65536|120:-256|130:-1674444|250:-16776961
+multimode = 50:-65536|120:-256|130:-16776961

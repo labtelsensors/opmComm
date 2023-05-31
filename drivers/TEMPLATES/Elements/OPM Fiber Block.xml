@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+    <Div RequiredElement="False" RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+			<Div Name="Fiber Optic Report Block" Positioning="Content" Padding="5,5,5,5">
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="30">
+							<Label Text="Cable ID : " ID="0" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OPMInfo" Field="CableID" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="30">
+							<Label Text="End 1 : " ID="1" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OPMInfo" Field="End1" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="30">
+							<Label Text="End 2 : " ID="2" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OPMInfo" Field="End2" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="30">
+							<Label Text="Date Of Test : " ID="3" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OPMInfo" Index="0" Field="TimeStamp" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="40">
+							<Label Text="Tested By : " ID="4" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OPMInfo" Field="Operator1" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="40">
+							<Label Text="Launch Cable : " ID="5" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OTDREnum" Field="LaunchCableType" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top">
+						<Div Positioning="Percentage" Alignment="Left" Width="40">
+							<Label Text="Tail Cable : " ID="6" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OTDREnum" Field="ReceiveCableType" FontSize="12" Text="       " />
+						</Div>
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

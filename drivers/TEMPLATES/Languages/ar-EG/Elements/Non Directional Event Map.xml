@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Height="15" Padding="5,5,5,5" BackColor="LightGray" >
+			<Div Positioning="Percentage" Alignment="Top" Height="20"  >
+				<Label Text="خريطة الحدث :" ID="0" Alignment="Top" Padding="2,2,2,2" FontSize="16" />
+			</Div>
+			<Div Positioning="Percentage" Alignment="Top" Height="25" >
+				<Div Positioning="Percentage" Alignment="Left" Width="20" >
+					<Div Positioning="Content" Alignment="Top"  >
+						<Label Text="نهاية 1" ID="1" Alignment="Left" Padding="2,2,2,2" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top"  >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndOneSite"  Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Right" Width="20"  >
+					<Div Positioning="Content" Alignment="Top"  >
+						<Label Text="نهاية 2" ID="2" Alignment="Right" Padding="2,2,2,2" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top"  >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndTwoSite" Alignment="Right"  Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Div Positioning="Percentage" Alignment="Top" Height="20" >
+						<Div Positioning="Content" Alignment="Center" Padding="5,5,5,5">
+							<Label Text="طول الوصلة :" ID="3" Alignment="Left" FontSize="12" BorderStyle="None" />
+							<Data DataSource="OTDRInfo" Index="0" Field="LinkLength" Alignment="Left" FontSize="12" Text="       " BorderStyle="None" />
+							<Label Text=" " Alignment="Left" FontSize="12" BorderStyle="None" />
+							<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnits" Alignment="Left" FontSize="12" Text="       " BorderStyle="None" />
+						</Div>
+					</Div>
+				</Div>
+			</Div>
+			<Div Positioning="Percentage" Alignment="Top" Height="55"  >
+				<EventLine Index="0" X="5" Y="30" X2="95" Y2="30" BackColor="Black" ForeColor="Blue" FontSize="10" />
+			</Div>
+		</Div>
+	</Body>
+</Template>
+		

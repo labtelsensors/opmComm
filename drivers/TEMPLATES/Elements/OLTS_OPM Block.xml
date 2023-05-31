@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Percentage" Width="100" Conditional="OPMInfo.ContainsOLTSData=True">
+			<Div Alignment="Top" Positioning="Content" Conditional="HasOPM">
+				<Div Positioning="Content" Alignment="Top" >
+					<Template FileName="Single Fiber OLTS Table.xml" Padding="0,5,0,5"/>
+				</Div>
+			</Div>
+		</Div>
+		<Div RequiredElement="False" Positioning="Content" Conditional="OPMInfo.ContainsOLTSData=False">
+			<Div Conditional="HasOPM" Positioning="Content" Alignment="Top">
+				<Div Positioning="Content" Alignment="Top" >
+					<Template FileName="Single Fiber OPM Table.xml" Padding="0,5,0,5"/>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>
+
+
+

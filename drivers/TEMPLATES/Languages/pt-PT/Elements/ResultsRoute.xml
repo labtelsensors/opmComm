@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div Alignment="Top" Positioning="Content">
+			<Label Alignment="Left" Positioning="Percentage" Text="Cabos:" ID="0" Width="50" FontSize="14" />
+			<Data Alignment="Right" DataSource="Route" Field="CableCount" FontSize="14" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content">
+			<Label Alignment="Left" Positioning="Percentage" Text="Fibras:" ID="1" Width="50" FontSize="14" />
+			<Data Alignment="Right" DataSource="Route" Field="FiberCount" FontSize="14" />
+		</Div>
+
+		<Div Conditional="HasOPM" Positioning="Content" Alignment="Top" >
+			<Label Alignment="Left" Positioning="Percentage" Text="OLTs / Fibra Leituras OPM:" ID="2" Width="50" FontSize="14" />
+			<Data Alignment="Right" DataSource="Route" Field="OPMCount" FontSize="14" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content">
+			<Label Alignment="Left" Positioning="Percentage" Text="Traços Monomodo:" ID="3" Width="50" FontSize="14" />
+			<Data Alignment="Right" DataSource="Route" Field="SingleModeTraceCount" FontSize="14" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content">
+			<Label Alignment="Left" Positioning="Percentage" Text="Traços Multimode:" ID="4" Width="50" FontSize="14" />
+			<Data Alignment="Right" DataSource="Route" Field="MultiModeTraceCount" FontSize="14" />
+		</Div>
+
+	</Body>
+</Template>

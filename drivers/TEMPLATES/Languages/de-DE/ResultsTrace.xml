@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+			<Label Alignment="HorizCenter" Text="Trace Zusammenfassung" ID="0" FontSize="36" />
+		</Div>
+		<Div Conditional="HasTrace" Positioning="Content" Alignment="Top" >
+			<Div Positioning="Content" Alignment="Top" >
+				<TraceGraph Positioning="Percentage" Alignment="Left" Width="100" Overlay="True" ShowHighlighted="True" Padding="5,5,5,5"  />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Data DataSource="OTDRInfo" ShowHighlighted="True" Field="Filename" Padding="2,2,2,2" FontSize="20" Text="       " />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Label Text ="."/>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Datum der Prüfung:" ID="1" Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" ShowHighlighted="True" Field="TimeStamp" FontSize="20" Text="       " />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Länge:" ID="2" Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" ShowHighlighted="True" Field="LinkLength" FontSize="20" Text="       " />
+					<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnits" FontSize="20"/>
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Insgesamt bestanden / nicht bestanden:" ID="3" Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Label Text="Pass" ID="4" ShowHighlighted="True" FontSize="20" Conditional="OTDRInfo.IsTracePass=True" />
+					<Label Text="Fail" ID="5" ShowHighlighted="True" FontSize="20" Conditional="OTDRInfo.IsTracePass=False" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Link Loss" ID="6" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="LinkLoss" FontSize="20" Text="       " Function="n/1000" Format="0.00" />
+					<Label Text="dB" ID="7" Alignment="Left" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Conditional="User.WaveLengthCount.Count>1" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Link Loss" ID="8" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left">
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="LinkLoss" FontSize="20" Text="       " Function="n/1000" Format="0.00" />
+					<Label Text="dB" ID="9" Alignment="Left" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Link ORL" ID="10" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="LinkORL" FontSize="20" Text="       " Function="-n/1000" Format="0.0" />
+					<Label Text="dB" ID="11" Alignment="Left" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Conditional="User.WaveLengthCount.Count>1">
+				<Div Positioning="Percentage" Alignment="Left" Width="40" >
+					<Label Text="Link ORL" ID="12" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="LinkORL" FontSize="20" Text="       " Function="-n/1000" Format="0.0" />
+					<Label Text="dB" ID="13" Alignment="Left" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Anzahl der Veranstaltungen" ID="14" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" Index="0" ShowHighlighted="True" Field="Events.Count" FontSize="20" Text="       " />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Conditional="User.WaveLengthCount.Count>1">
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Anzahl der Veranstaltungen" ID="15" Alignment="Left" FontSize="20" />
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="Wavelength" FontSize="20" />
+					<Label Text=" : " Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" Index="1" ShowHighlighted="True" Field="Events.Count" FontSize="20" Text="       " />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="40">
+					<Label Text="Kommentare:" ID="16" Alignment="Left" FontSize="20" />
+				</Div>
+				<Div Positioning="Fill" Alignment="Left" >
+					<Data DataSource="OTDRInfo" ShowHighlighted="True" Field="Comment" FontSize="20" Text="       " />
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

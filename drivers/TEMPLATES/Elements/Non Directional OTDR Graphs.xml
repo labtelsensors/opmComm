@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Height="5" MaxHeight="30" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.ContainsSingleMode=True">
+			<TraceGraph Index="0" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+			<TraceGraph Index="1" Positioning="Fill" Alignment="Left" Padding="5,5,5,5"  />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Height="5" MaxHeight="30" Padding="5,5,5,5" BackColor="LightGray" Conditional="OTDRInfo.ContainsMultiMode=True">
+			<TraceGraph Index="1" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+			<TraceGraph Index="0" Positioning="Fill" Alignment="Left" Padding="5,5,5,5"  />
+		</Div>
+	</Body>
+</Template>
+		

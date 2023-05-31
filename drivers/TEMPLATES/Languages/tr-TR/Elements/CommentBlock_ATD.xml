@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" RequiredElement="False" Alignment="Top" Padding="20,5,20,5" >
+			<Div Positioning="Percentage" Alignment="Left" BorderStyle="OuterRadius" Forecolor="LightGray" >
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5"  >
+					<Div Positioning="Percentage" Alignment="Left" Width="100" >
+						<Label Text="Yorum:" ID="0" Alignment="Left" FontSize="10" />
+						<Data Alignment="Left" DataSource="OPMInfo" Field="Comment" FontSize="10" Wrap="True"/>
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

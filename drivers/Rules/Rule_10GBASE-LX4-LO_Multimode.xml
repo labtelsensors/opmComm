@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="10GBASE-LX4-LO"
+		  TestPort="Multimode"
+		  Units="dB"
+		  LossThreshType="TotalLoss"
+		  Description="10GBASE-LX4 (1300 nm) on (OM3) Laser Optimized Fiber - Modal BW 2000 MHz.Km"
+		  CatType="Ethernet"
+		  FTA="OM3_LaserOptimized_50_125um"
+		  StdType="Application" Version="1.0.1">
+		<LossThreshold WL="1300"
+					   Min="0"
+					   Max="2.0"></LossThreshold>
+		<MaxLength Units="Meters">300</MaxLength>
+	</Rule>
+</Rules>

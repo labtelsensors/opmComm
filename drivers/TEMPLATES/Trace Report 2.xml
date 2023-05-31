@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Full size OTDR graph with main wavelength and other wavelengths for the test fiber shown for comparison. The Event table of the Main wavelength is displayed below graph. This report generates a page for each wavelength for each fiber.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="OTDR Event Table.xml" />
+		<Template FileName="Trace Summary.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

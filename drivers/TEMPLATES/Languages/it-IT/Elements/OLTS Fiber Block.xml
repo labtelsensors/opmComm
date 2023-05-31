@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" RenderOption="OncePerCable" Positioning="Percentage" Height="10" Alignment="Top" Padding="20,0,20,0" >
+			<Div Name="OLTS Fiber Block" Positioning="Percentage" Width="100" >
+
+				<Div RenderOption="OncePerCable" Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Label Text="ID cavo:" ID="0" Alignment="Left" FontSize="10" />
+						<Data DataSource="OPMInfo" Field="CableID" FontSize="10" />
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="55">
+							<Label Text="Porta:" ID="1" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="FiberType" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="55">
+							<Label Text="Tipo di fibra:" ID="2" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="CableType" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=True">
+						<Div Positioning="Percentage" Alignment="Left" Width="55">
+							<Label Text="Cavo lancio:" ID="3" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="LaunchCord.Length" FontSize="10" />
+							<Label Text=" " Alignment="Left" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="LaunchCord.FiberConnectorType1" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=True">
+						<Div Positioning="Percentage" Alignment="Left" Width="55">
+							<Label Text="Cavo coda:" ID="4" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="ReceiveCord.Length" FontSize="10" />
+							<Label Text=" " Alignment="Left" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="ReceiveCord.FiberConnectorType2" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="HasOPM AND OPMInfo.TimeStamp.0.IsValidDate=True">
+						<Div Positioning="Percentage" Alignment="Left" Width="55">
+							<Label Text="Data della prova:" ID="5" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Index="0" Field="TimeStamp" FontSize="10" />
+						</Div>
+					</Div>
+          <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="55">
+              <Label Text="Tipo Connettore di Ispezione: " ID="37" Alignment="Left" FontSize="10" Conditional="HasImage" />
+            </Div>
+            <Div Positioning="Fill" Alignment="Left" >
+              <Data DataSource="ImageInfo" Index="0" Field="FiberType" FontSize="10" Conditional="HasImage" />
+            </Div>
+          </Div>
+				</Div>
+
+				<Div RenderOption="OncePerCable" Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Label Text="Estremità 1:" ID="6" Alignment="Left" FontSize="10" />
+						<Data DataSource="OPMInfo" Field="End1" FontSize="10" />
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="N. modello OPM:" ID="7" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="MainModel" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="N. di serie OPM:" ID="8" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="MainSerialNumber" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Vers. Software:" ID="9" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="MainSoftwareRev" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Data cal." ID="10" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="MainCalDate" FontSize="10" Conditional="OPMInfo.MainCalDate.IsValidDate=True"/>
+							<Label Text="N/D" ID="11" FontSize="10" Conditional="OPMInfo.MainCalDate.IsValidDate!=True" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Operatore:" ID="12" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="Operator1" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=True">
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Tipo conn.:" ID="13" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="LaunchCord.FiberConnectorType1" FontSize="10" />
+						</Div>
+					</Div>
+				</Div>
+
+				<Div RenderOption="OncePerCable" Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Label Text="Estremità 2" ID="14" Alignment="Left" FontSize="10" />
+						<Data DataSource="OPMInfo" Field="End2" FontSize="10" />
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="N. modello OLS:" ID="15" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="RemoteModel" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="N. serie OLS:" ID="16" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="RemoteSerialNumber" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Vers. Software:" ID="17" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="RemoteSoftwareRev" FontSize="10" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Data cal." ID="18" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="RemoteCalDate" FontSize="10" Conditional="OPMInfo.RemoteCalDate.IsValidDate=True"/>
+							<Label Text="N/D" ID="19" FontSize="10" Conditional="OPMInfo.RemoteCalDate.IsValidDate!=True" />
+						</Div>
+					</Div>
+
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Operatore:" ID="20" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="Operator2" FontSize="10" />
+						</Div>
+					</Div>
+					<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=True">
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Tipo conn.:" ID="21" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OPMInfo" Field="ReceiveCord.FiberConnectorType2" FontSize="10" />
+						</Div>
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

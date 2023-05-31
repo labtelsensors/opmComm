@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>OLTS أو فقدان القدرة لمدة الجدول قياس موجات اختبار</Description>
+			<HelpText>فقدان الطاقة أو الجدول : \ عدد nfiber ، اختبار التوجيه والطول الموجي ، \ nshowing الخسارة ( dB (أو السلطة) dBm اختبار أو واط) للألياف. \ nReports نتائج فقدان الفحوص التي أجريت في حركةقياس قدرة الضوء التلقائي - اختبار طرق. nThis \ قالب لا يولد النجاح أم الفشل التقرير.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OLTS Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="OPM Table Header.xml" />
+			<Template FileName="OPM Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

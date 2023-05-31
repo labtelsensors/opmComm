@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<ArrayOfClassSelectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ClassSelectorDefinition>
+		<Name>Default</Name>
+		<!-- This definition will be used if there are no other matches -->
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<!-- Properties should not be specified so it will not match prematurely -->
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M200</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M200</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M210</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M210</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M210_25</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M210_25</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M310 Multimode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M310</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">true</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M310_25 Multimode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M310_25</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">true</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M310 Singlemode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M310</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">false</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M310_25 Singlemode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M310_25</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">false</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>Quattro</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">Quattro</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>C850</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M200AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">C850</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_24 Multimode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M700_24AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_24</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">true</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_24 Singlemode</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_24</CompareValue>
+			</ComparisonProperty>
+			<ComparisonProperty>
+				<Name>IsMultimode</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:boolean">false</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M710_40</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M710_40</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M700AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700B</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M700AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700B</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M710</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M710</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_20</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_20</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_21</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_21</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_22</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_22</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M700_23</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.M710AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>ModuleID</Name>
+				<CompareMethod>Equals</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M700_23</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>OFL250</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.Ofl280AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>MainFrameID</Name>
+				<CompareMethod>StartsWith</CompareMethod>
+				<CompareValue xsi:type="xsd:string">OFL25</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>M201</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.Flx380AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>MainFrameID</Name>
+				<CompareMethod>StartsWith</CompareMethod>
+				<CompareValue xsi:type="xsd:string">M201</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>FLX380</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.Flx380AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>MainFrameID</Name>
+				<CompareMethod>StartsWith</CompareMethod>
+				<CompareValue xsi:type="xsd:string">FLX</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>OFL280</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.Flx380AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>MainFrameID</Name>
+				<CompareMethod>StartsWith</CompareMethod>
+				<CompareValue xsi:type="xsd:string">OFL</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+	<ClassSelectorDefinition>
+		<Name>CS</Name>
+		<AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+		<ClassName>Noyes.CF.OTDR.Logic.Flx380AutoEvents</ClassName>
+		<Properties>
+			<ComparisonProperty>
+				<Name>MainFrameID</Name>
+				<CompareMethod>StartsWith</CompareMethod>
+				<CompareValue xsi:type="xsd:string">CS</CompareValue>
+			</ComparisonProperty>
+		</Properties>
+	</ClassSelectorDefinition>
+  <ClassSelectorDefinition>
+    <Name>M310 Multimode</Name>
+    <AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+    <ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+    <Properties>
+      <ComparisonProperty>
+        <Name>ModuleID</Name>
+        <CompareMethod>Equals</CompareMethod>
+        <CompareValue xsi:type="xsd:string">M310</CompareValue>
+      </ComparisonProperty>
+      <ComparisonProperty>
+        <Name>IsMultimode</Name>
+        <CompareMethod>Equals</CompareMethod>
+        <CompareValue xsi:type="xsd:boolean">true</CompareValue>
+      </ComparisonProperty>
+    </Properties>
+  </ClassSelectorDefinition>
+  <ClassSelectorDefinition>
+    <Name>M310_25 Multimode</Name>
+    <AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+    <ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+    <Properties>
+      <ComparisonProperty>
+        <Name>ModuleID</Name>
+        <CompareMethod>Equals</CompareMethod>
+        <CompareValue xsi:type="xsd:string">M310_25</CompareValue>
+      </ComparisonProperty>
+      <ComparisonProperty>
+        <Name>IsMultimode</Name>
+        <CompareMethod>Equals</CompareMethod>
+        <CompareValue xsi:type="xsd:boolean">true</CompareValue>
+      </ComparisonProperty>
+    </Properties>
+  </ClassSelectorDefinition>
+  <ClassSelectorDefinition>
+    <Name>M210_E</Name>
+    <AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+    <ClassName>Noyes.CF.OTDR.Logic.EnhancedAutoEvents</ClassName>
+    <Properties>
+      <ComparisonProperty>
+        <Name>ModuleID</Name>
+        <CompareMethod>Equals</CompareMethod>
+        <CompareValue xsi:type="xsd:string">M210_E</CompareValue>
+      </ComparisonProperty>
+    </Properties>
+  </ClassSelectorDefinition>
+  <ClassSelectorDefinition>
+    <Name>FS200-100</Name>
+    <AssemblyName>Noyes.CF.OTDR.Logic</AssemblyName>
+    <ClassName>Noyes.CF.OTDR.Logic.Flx380AutoEvents</ClassName>
+    <Properties>
+      <ComparisonProperty>
+        <Name>MainFrameID</Name>
+        <CompareMethod>StartsWith</CompareMethod>
+        <CompareValue xsi:type="xsd:string">FS200</CompareValue>
+      </ComparisonProperty>
+    </Properties>
+  </ClassSelectorDefinition>
+</ArrayOfClassSelectorDefinition>

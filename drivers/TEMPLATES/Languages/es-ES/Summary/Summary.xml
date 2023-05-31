@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="1" Padding="40,40,40,40">
+
+			<Div Positioning="Content" Alignment="Top" >
+
+				<Div Positioning="Percentage" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+						<Label Text="Resumen del Proyecto" ID="0" FontSize="24" Alignment="VertCenter" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,0" Conditional="Settings.ProjectJobName.Length>0 OR Settings.ProjectJobDescription.Length>0 OR Settings.ProjectTestPhase.Length>0 OR Settings.ProjectAwardDateChecked=True OR Settings.ProjectJobCompletionDateChecked=True OR Settings.ProjectDatePreparedChecked=True OR Settings.ProjectManager.Length>0 OR Settings.ProjectContractPONumber.Length>0 OR Settings.ProjectPreparedBy.Length>0">
+
+					<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+						<Div Positioning="Content" Alignment="Left" Padding="10,10,10,10">
+							<Div Positioning="Content" Alignment="Left" >
+								<Template FileName="ProjectDetail.xml"  />
+							</Div>
+						</Div>
+					</Div>
+
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0"  >
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray"  >
+						<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+							<Label Alignment="Left" Text="Resumen de resultados:" ID="1" FontSize="14" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="30,10,10,10" >
+							<Template FileName="ResultsColumns.xml" Alignment="Left" />
+						</Div>
+
+					</Div>
+				</Div>
+
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Bottom" Height="6" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray"  >
+				<Div Positioning="Percentage" Alignment="HorizCenter" Width="100" Padding="10,10,10,10" >
+					<Template FileName="AFLNoyesBlock.xml" Padding="5,5,5,5" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,20" Conditional="Settings.IncludeAcceptanceSignature=True" >
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+					<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10">
+						<Template FileName="Acceptance Signature Block.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

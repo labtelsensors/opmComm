@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+  <Body>
+    <Div Positioning="Percentage" Alignment="Top" Height="100" Padding="5,5,5,5" >
+        <ImageElement FileName="PreparerLogo" Positioning="Percentage" Alignment="Left" Sizing="FixedAspect" Width="40" Padding="5,5,5,5" Conditional="Settings.IncludePreparerLogoInfo=true"/>
+    <Div Positioning="Fill" Alignment="Left" Render="Once" >
+      <Div Positioning="Content" Alignment="Top" Padding="0,5,0,0" Conditional="Settings.ProjectJobName.Length>0" >
+        <Label Text="工作名稱:" ID="0" Alignment="Left" FontSize="14" />
+        <Data DataSource="Settings" Field="ProjectJobName" FontSize="14" Alignment="Left" />
+      </Div>
+      <Div Positioning="Content" Alignment="Top" Padding="0,5,0,0">
+        <Div Positioning="Percentage" Alignment="Left" Width="50">
+          <Div Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="25">
+              <Label Text="型號:" ID="1" Alignment="Left" FontSize="12" />
+            </Div>
+            <Data DataSource="OTDRInfo" Field="MainFrameID" FontSize="12" Text="       " />
+          </Div>
+          <Div Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="25">
+              <Label Text="序號:" ID="2" Alignment="Left" FontSize="12" />
+            </Div>
+            <Data DataSource="OTDRInfo" Field="MainFrameSN" FontSize="12" Text="       " />
+          </Div>
+          <Div Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="25">
+              <Label Text="校準日期:" ID="3" Alignment="Left" FontSize="12" />
+            </Div>
+          </Div>
+        </Div>
+        <Div Positioning="Fill" Alignment="Left">
+          <Div Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="42">
+              <Label Text="連接埠:" ID="4" Alignment="Left" FontSize="12" />
+            </Div>
+            <Data DataSource="OTDRInfo" Index="0" Field="FiberType" FontSize="12" Text="       " />
+          </Div>
+          <Div Positioning="Content" Alignment="Top" >
+            <Div Positioning="Percentage" Alignment="Left" Width="42">
+              <Label Text="軟體版本:" ID="5" Alignment="Left" FontSize="12" />
+            </Div>
+            <Data DataSource="OTDRInfo" Index="0" Field="SoftwareRev" FontSize="12" Text="       " />
+          </Div>
+        </Div>
+      </Div>
+    </Div>
+    </Div>
+    <Div Positioning="Percentage" Alignment="Top" Height="100" Padding="5,5,5,5" >
+      <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="40" Padding="5,5,5,5" />
+    </Div>
+  </Body>
+</Template>

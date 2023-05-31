@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+  <Rule Name="ATM-622-1300nm-62.5" 
+		TestPort="Multimode" 
+		Units="dB" 
+		LossThreshType="TotalLoss" 
+		Description="ATM-622-62.5 (1300nm)" 
+		CatType="Other"
+		FTA="OM1_62_5_125um"
+		StdType="Application" Version="1.0.0">
+    <LossThreshold WL="1300" 
+				   Max="6.0"></LossThreshold>
+    <MaxLength Units="Meters">500</MaxLength>
+  </Rule>
+</Rules>

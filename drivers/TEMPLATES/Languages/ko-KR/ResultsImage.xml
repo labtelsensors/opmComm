@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+			<Label Alignment="HorizCenter" Text="광섬유 최종 이미지" ID="0" FontSize="36" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" >
+			<Div Positioning="Content" Alignment="Top" Padding="40,40,40,40" >
+				<ImageElement Index="0" Sizing="FixedAspect" ShowHighlighted="True" Alignment="Center"/>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="40,0,0,0" >
+				<Label Padding="2,2,0,2" FontSize="20" Text="이미지 끝 위치: " ID="0" />
+				<Data DataSource="ImageInfo" ShowHighlighted="True" Field="End" Padding="0,2,2,2" FontSize="20" Text="       " />
+			</Div>
+		</Div>
+	</Body>
+</Template>

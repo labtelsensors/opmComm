@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<PageSettings>
+		<Padding>10,10,10,10</Padding>
+		<Positioning>Absolute</Positioning>
+		<BackColor>255,255,255</BackColor>
+		<Border>None</Border>
+	</PageSettings>
+	<Body>
+
+		<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=true">
+			<Template FileName="Certification Block.xml" />
+
+			<Div Positioning="Content" Alignment="Top">
+				<OLTSTable Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" />
+			</Div>
+		</Div>
+		
+		<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=False AND HasOPM">
+			<Div Positioning="Content" Alignment="Top">
+				<Label Text="OPM 결과" ID="0" FontSize="16" />
+			</Div>
+			<Div Positioning="Content" Alignment="Top">
+				<OPM_Table Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" />
+			</Div>
+		</Div>
+		
+	</Body>
+</Template>

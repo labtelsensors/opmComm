@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<FileName>OTDR Thumnail Traces Summary.xml</FileName>
+			<HelpText>Affiche les traces de miniature OTDR pour le/les câbles choisis. Pour les câbles sans traces, affiche le résumé du câble.</HelpText>
+			<Description>Traces miniatures pour le/les câbles sélectionnés.</Description>
+		</PageSettings>
+
+		<Div Section="CoverPage" RenderOption="OncePerCable" Order="3" Padding="40,40,40,40" >
+
+			<Div Conditional="HasTrace AND OTDRInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,30,20,20" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,20,10,5" >
+									<Label Text="Résumé de trace de câble" ID="0" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,5" >
+									<Label Text="ID câble :" ID="1" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OTDRInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="10" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+
+				</Div>
+
+				<TraceSummary Positioning="Content" Alignment="Top" Height="5" X2="10" Padding="10,10,10,10" />
+
+			</Div>
+
+			<Div Conditional="HasNoTrace AND OPMInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,20">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,30,20,20" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,20,10,5" >
+									<Label Text="Résumé câble" ID="2" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+									<Label Text="ID câble :" ID="3" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OPMInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="10" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+					<Div Alignment="Center" Positioning="Content" Width="80" Padding="20,20,20,20" >
+
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="Résultats OLTS/OPM :" ID="4" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMCount" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="Longueurs d&apos;onde testées :" ID="5" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMWavelengths" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="Résultats de la certification inclus" ID="6" Width="50" FontSize="20" Conditional="Cable.HasATResults=True" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+						</Div>
+
+					</Div>
+				</Div>
+
+			</Div>
+
+		</Div>
+
+	</Body>
+</Template>

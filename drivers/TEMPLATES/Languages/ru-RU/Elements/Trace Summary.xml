@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Padding ="20,0,20,5" Positioning="Content" Alignment="Top" BackColor="LightGray">
+			<OTDRTable Index="0" Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" Padding="5,5,5,5" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=false ">
+			<Label Text="* - Не включает в себя буферный или приёмный кабели" ID="0" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=true ">
+			<Label Text="* - Не включает в себя буферный кабель" ID="1" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=true AND OTDRInfo.ReceiveCable=false " BackColor="Orange">
+			<Label Text="* - Не включает в себя приёмный кабель" ID="2" />
+		</Div>
+	</Body>
+</Template>

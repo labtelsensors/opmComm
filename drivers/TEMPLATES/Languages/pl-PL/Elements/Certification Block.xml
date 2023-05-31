@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div Positioning="Percentage" Width="100" Alignment="Top" Conditional="OPMInfo.ContainsOLTSData=True" >
+			<Label Text="Wyniki Certyfikacji" ID="0" FontSize="14" Width="50"/>
+			<Div Positioning="Content" Alignment="Right" >
+				<Div Positioning="Content" >
+					<Label Text="Standard okablowania:" ID="1" FontSize="14"/>
+				</Div>
+				<Data DataSource="OPMInfo" Field="CablingRuleName" Index="0" FontSize="14"/>
+			</Div>
+		</Div>
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,8,0,8" >
+
+			<Div Positioning="Percentage" Width="25" >
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="70">
+						<Label Text="Ilość połączeń:" ID="2" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OPMInfo" Index="0" Field="OPMInfo.FiberItem.NumberOfConnections" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="70">
+						<Label Text="ilość spawów:" ID="3" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill"  >
+						<Data DataSource="OPMInfo" Index="0" Field="OPMInfo.FiberItem.NumberOfSplices" FontSize="10" />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Width="40" >
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="30">
+						<Label Text="Limit Tłum:" ID="4" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OPMInfo" Index="0" Field="LossLimit" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="30">
+						<Label Text="Limit Długości:" ID="5" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OPMInfo" Index="0" Field="LengthLimit" FontSize="10" />
+					</Div>
+				</Div>
+			</Div>
+			<Div Positioning="Percentage" Width="30" >
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="50">
+						<Label Text="NVP Kabla:" ID="6" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OPMInfo" Index="0" Field="GIR" Function="(1/n) * 100" Format="0.00" FontSize="10" />
+						<Label Text="%" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="50">
+						<Label Text="Opóźnienie Propagacji:" ID="7" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OPMInfo" Index="0" Field="PropagationDelay" FontSize="10" Format="0.0" />
+						<Label Text="ns" ID="8" FontSize="10" />
+					</Div>
+				</Div>
+			</Div>
+
+			</Div>
+
+		<Div Positioning="Content" Alignment="Top" Padding="10,0,0,5" >
+			<Data DataSource="OPMFiberInfo" Field="Filename" FontSize="10" />
+		</Div>
+
+
+	</Body>
+</Template>

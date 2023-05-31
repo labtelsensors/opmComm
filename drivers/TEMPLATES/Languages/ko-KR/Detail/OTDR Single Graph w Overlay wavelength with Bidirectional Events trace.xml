@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>OTDR 단일 그래프 w 오버레이 파장 추적 양방향 이벤트</Description>
+			<HelpText>OTDR 그래프: 주요 파장 겹쳐 다른 파장 \nfor 비교. \nBidirectional 이벤트에 대 한 표시 된 테이블에 대 한 주요 파장 그래프. \nReport 아래에 표시 됩니다 각 섬유에 대 한 각 파장에 대 한 페이지를 생성 하는 테스트 섬유.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|AZ|Bidirectional" Parameters="Wavelength" Increment="1">
+
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Single Indexed OTDR Bidirectional Event Table.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<Template FileName="Single Fiber OPM Table.xml" />
+      <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0"
+               Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="SingleMode|AZ" >
+        <Div Positioning="Percentage" Width="80" Alignment="Left" >
+          <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="SingleMode|AZ" />
+        </Div>
+      </Div>
+			<Div Positioning="Content" Alignment="Floating" X="3" Y="99" >
+				<Label Text="{0} {1}" Parameters="Wavelength,Direction" Fontsize="10" />
+			</Div>
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|ZA|Bidirectional" Parameters="Wavelength" Increment="1">
+
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Single Indexed OTDR Bidirectional Event Table.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<Template FileName="Single Fiber OPM Table.xml" />
+      <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="SingleMode|ZA" >
+
+        <Div Positioning="Percentage" Width="80" Alignment="Left" >
+          <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="SingleMode|ZA" />
+        </Div>
+      </Div>
+			<Div Positioning="Content" Alignment="Floating" X="3" Y="99" >
+				<Label Text="{0} {1}" Parameters="Wavelength,Direction" Fontsize="10" />
+			</Div>
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+	</Body>
+</Template>

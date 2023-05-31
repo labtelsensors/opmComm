@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="10BASE-LX4"
+		  TestPort="Singlemode"
+		  Units="dB"
+		  LossThreshType="TotalLoss"
+		  Description="10BASE-LX4(1310nm)"
+		  CatType="Ethernet"
+		  StdType="Application" Version="1.0.1">
+		<LossThreshold WL="1310"
+					   Min="0"
+					   Max="6.3"></LossThreshold>
+		<MaxLength Units="Meters">10000</MaxLength>
+	</Rule>
+</Rules>

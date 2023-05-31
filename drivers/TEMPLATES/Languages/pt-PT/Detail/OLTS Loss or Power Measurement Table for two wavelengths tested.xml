@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>Perda ou OLTs Medição Mesa para dois comprimentos de onda testados</Description>
+			<HelpText>Perda ou Power Tabela: Número nfiber \ testado direção e comprimento de onda, \ nshowing a perda (dB) ou Power (dBm ou watts) para as fibras testadas. \ NReports resultados de perda de testes realizados em OPM ou Auto - modos de teste. \ nEsta modelo não gerar uma aprovação / reprovação do relatório.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OLTS Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="OPM Table Header.xml" />
+			<Template FileName="OPM Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

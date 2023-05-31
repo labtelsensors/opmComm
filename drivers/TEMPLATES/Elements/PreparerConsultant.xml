@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.IncludeConsultantLogoInfo=True OR Settings.IncludeConsultantInfo=True">
+			<Div Positioning="Content" Alignment="Top" Conditional="Settings.IncludePreparerLogoInfo=True OR Settings.IncludePreparerInfo=True">
+				<Div Conditional="Settings.PreparerSectionTitle.Length>0" >
+					<Data Positioning="Percentage" Alignment="Left"  Width="52" DataSource="Settings" Field="PreparerSectionTitle" FontSize="15" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True"/>
+				</Div>
+				<Div Conditional="Settings.ConsultantSectionTitle.Length>0" >
+					<Data Positioning="Percentage" Alignment="Right"  DataSource="Settings" Field="ConsultantSectionTitle" FontSize="15" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True"/>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Top" Width="100" Height="18" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,10,10" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True" >
+				<Div Positioning="Percentage" Alignment="Left" Width="48" >
+					<Div Alignment="HorizCenter" >
+						<Template FileName="PreparerDetail-TopLogo.xml" />
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Right" Width="48" >
+					<Div Alignment="HorizCenter" >
+						<Template FileName="ConsultantDetail-TopLogo.xml" />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+
+	</Body>
+</Template>

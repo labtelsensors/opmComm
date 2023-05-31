@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>OLTS Loss (w ave if Bi-Dir) and ORL (T500 data) with Inspection Results</Description>
+			<HelpText>Loss or Power Table w Ave and ORL\nFiber Number, Wavelength, Loss Results by direction with\nAve Loss and ORL for the fibers as tested using T500.\nReport template can also be used for generating Ave loss for bi-directional OPM Loss Measurements</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="AutoTest Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="ORL Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

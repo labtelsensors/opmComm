@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="10BASE-FL-62.5" 
+		  TestPort="Multimode" 
+		  Units="dB" 
+		  LossThreshType="TotalLoss" 
+		  Description="10BASE-FL-62.5 (850 nm) on (OM1) 62.5 μm fiber." 
+		  CatType="Ethernet"
+		  FTA="OM1_62_5_125um"
+		  StdType="Application" Version="1.0.0">
+		<LossThreshold WL="850" 
+					   Min="0" 
+					   Max="12.5"></LossThreshold>
+		<MaxLength Units="Meters">2000</MaxLength>
+	</Rule>
+</Rules>

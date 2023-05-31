@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Padding="10,10,10,10" Conditional="Settings.ProjectJobName.Length>0">
+
+			<Div Positioning="Content" Alignment="Center" >
+				<Div Positioning="Percentage" Alignment="Top" MaxHeight="20" Padding="0,0,0,20" >
+					<Label Alignment="Left" Text="件名：" ID="0" Positioning="Percentage" Width="20" FontSize="20" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0"/>
+					<Data Alignment="Left" DataSource="Settings" Field="ProjectJobName" Wrap="True" FontSize="20" Conditional="Settings.ProjectJobName.Length>0"/>
+					<Data Alignment="Left" DataSource="JobClass" Field="Name" FontSize="24" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Content" Alignment="Center" >
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectJobDescription.Length>0" >
+							<Label Alignment="Left" Text="件名内容：" ID="1" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectJobDescription" Wrap="True" FontSize="12" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectTestPhase.Length>0" >
+							<Label Alignment="Left" Text="テストフェーズ：" ID="2" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectTestPhase" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="0,20,0,0" Conditional="Settings.ProjectAwardDateChecked=True" >
+							<Label Alignment="Left" Text="受注日：" ID="3" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectAwardDate" Format="Long" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectJobCompletionDateChecked=True" >
+							<Label Alignment="Left" Text="終了日：" ID="4" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectJobCompletionDate" Format="Long" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectDatePreparedChecked=True" >
+							<Label Alignment="Left" Text="準備期間：" ID="5" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectDatePrepared" Format="Long" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="0,20,0,0" Conditional="Settings.ProjectManager.Length>0" >
+							<Label Alignment="Left" Text="プロジェクトマネージャー：" ID="6" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectManager" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectContractPONumber.Length>0" >
+							<Label Alignment="Left" Text="契約書(PO)番号：" ID="7" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectContractPONumber" Wrap="True" FontSize="12"  />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectPreparedBy.Length>0" >
+							<Label Alignment="Left" Text="報告者：" ID="8" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectPreparedBy" Wrap="True" FontSize="12"  />
+						</Div>
+
+					</Div>
+				</Div>
+
+			</Div>
+		</Div>
+	</Body>
+</Template>

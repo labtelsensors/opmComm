@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Conditional="HasOPM" Positioning="Content" Alignment="Top" Padding="5,5,5,5" >
+			<Div Positioning="Content" Alignment="Top" Height="4" BackColor="LightGray">
+				<Div Positioning="Content" Alignment="Top" Width="100" >
+					<Label Text="Resultados OLTS" ID="0" Alignment="Left" Padding="2,2,2,2" FontSize="16" />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="0,2,0,0" >
+					<Div Positioning="Percentage" Alignment="Left" Width="100">
+						<Div Positioning="Content" Alignment="Top" >
+							<Data DataSource="OPMFiberInfo" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+						</Div>
+					</Div>
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray" >
+				<OPMTable Positioning="Percentage" Width="100" Alignment="Left" Padding="5,5,5,5"  />
+			</Div>
+		</Div>
+	</Body>
+</Template>
+		

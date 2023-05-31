@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<PageSettings>
+		<Padding>40,40,40,40</Padding>
+		<Positioning>Absolute</Positioning>
+		<BackColor>255,255,255</BackColor>
+		<Border>None</Border>
+	</PageSettings>
+	<Body>
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="0"  >
+
+			<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+					<Div Positioning="Content" Alignment="Left" Padding="10,10,10,10" Backcolor="Aqua" >
+						<Template FileName="JobInfo.xml"  />
+					</Div>
+				</Div>
+
+			</Div>
+
+
+			<Div Positioning="Content" Alignment="VertCenter" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" Backcolor="Aqua" >
+						<Template FileName="JobInfo.xml"  />
+					</Div>
+				</Div>
+
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+					<Div Positioning="Content" Alignment="Right" Padding="10,10,10,10" Backcolor="Aqua" >
+						<Template FileName="JobInfo.xml"  />
+					</Div>
+				</Div>
+
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

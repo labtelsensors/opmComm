@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Padding ="20,0,20,5" Positioning="Content" Alignment="Top" BackColor="LightGray">
+			<OTDRTable Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" Padding="5,5,5,5" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=false ">
+			<Label Text="* - Nem tartalmazza a Dob vagy fogadása Kábelek" ID="0" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=true ">
+			<Label Text="* - Nem tartalmazza a Dob Kábel" ID="1" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=true AND OTDRInfo.ReceiveCable=false " BackColor="Orange">
+			<Label Text="* - Nem tartalmazza a kábel fogadása" ID="2" />
+		</Div>
+	</Body>
+</Template>

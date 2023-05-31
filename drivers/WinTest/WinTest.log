@@ -1,0 +1,41 @@
+ 30102        Timeout       COPMng        Connect()     05/03/2021 16:20:54 
+ 30102        Timeout       COPMng        IInstrument_Connect()       05/03/2021 16:20:54 
+ 30102        Timeout       COPMng        Connect()     05/03/2021 16:21:38 
+ 30102        Timeout       frmInstrument InitInstrument()            05/03/2021 16:21:38 
+ 30102        Timeout       frmInstrument ShowCapture() 05/03/2021 16:21:38 
+ 30102        Timeout       frmMain       mnuFCaptureData_Click()     05/03/2021 16:21:38 
+ 30102        Timeout       COPMng        Connect()     05/03/2021 16:23:20 
+ 30102        Timeout       COPMng        IInstrument_Connect()       05/03/2021 16:23:20 
+ 30102        Timeout       COPMng        Connect()     05/03/2021 16:23:47 
+ 30102        Timeout       COPMng        IInstrument_Connect()       05/03/2021 16:23:47 
+ 30102        Timeout       COPMng        Connect()     05/03/2021 16:24:18 
+ 30102        Timeout       COPMng        IInstrument_Connect()       05/03/2021 16:24:18 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:26:11 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:29:27 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:29:45 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:30:36 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:30:46 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:33:59 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:41:25 
+ 91           Object variable or With block variable not set          frmMain       mfrmProgress_Cancel()       05/03/2021 16:49:24 
+ 91           Object variable or With block variable not set          frmMain       CheckBaudRate()             05/03/2021 16:54:02 
+ 91           Object variable or With block variable not set          frmMain       SetInstrumentType()         05/03/2021 16:54:02 
+ 91           Object variable or With block variable not set          frmMain       Form_Load()   05/03/2021 16:54:02 
+ 91           Object variable or With block variable not set          frmMain       Form_Unload() 12/03/2021 07:48:12 
+ 70           Permission denied           frmInstrument OpenCaptureFile()           10/05/2021 16:11:12 
+ 70           Permission denied           frmInstrument mnuFCaptureData_Click()     10/05/2021 16:11:12 
+ 91           Object variable or With block variable not set          frmMain       CheckBaudRate()             10/05/2021 16:13:13 
+ 91           Object variable or With block variable not set          frmMain       SetInstrumentType()         10/05/2021 16:13:13 
+ 91           Object variable or With block variable not set          frmMain       Form_Load()   10/05/2021 16:13:13 
+ 91           Object variable or With block variable not set          frmMain       mnuFGetReport_Click()       10/05/2021 16:13:18 
+ 91           Object variable or With block variable not set          frmMain       Form_Unload() 10/05/2021 16:15:50 
+ 70           Permission denied           frmInstrument OpenCaptureFile()           10/05/2021 16:50:02 
+ 70           Permission denied           frmInstrument mnuFCaptureData_Click()     10/05/2021 16:50:02 
+ 0                          frmAbout      StartSysInfo()              10/05/2021 17:06:57 
+ 5            Invalid procedure call or argument        frmAbout      cmdSysInfo_Click()          10/05/2021 17:06:57 
+ 8021         Internal error retrieving device control block for the port           CSerialPort   Get InBufferCount()         10/05/2021 17:30:17 
+ 8021         Internal error retrieving device control block for the port           CWintestRoutines            InBufferCount()             10/05/2021 17:30:17 
+ 8021         Internal error retrieving device control block for the port           frmMain       mnuFGetReport_Click()       10/05/2021 17:30:17 
+ 8021         Internal error retrieving device control block for the port           CSerialPort   Get InBufferCount()         10/05/2021 17:33:36 
+ 8021         Internal error retrieving device control block for the port           CWintestRoutines            InBufferCount()             10/05/2021 17:33:36 
+ 8021         Internal error retrieving device control block for the port           frmMain       mnuFGetReport_Click()       10/05/2021 17:33:36 

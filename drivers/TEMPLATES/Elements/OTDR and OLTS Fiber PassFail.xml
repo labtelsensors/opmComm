@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Percentage" Alignment="Floating" X="92" Y="2.1" Width="4.5" Height="4.5" >
+			<Div Conditional="OTDRInfo.OverallPassFail!=False AND OPMInfo.FiberPassFail!=False" Positioning="Content">
+				<ImageElement FileName="Check" />
+			</Div>
+			<Div Conditional="OTDRInfo.OverallPassFail=False OR OPMInfo.FiberPassFail=False" Positioning="Content">
+				<ImageElement FileName="X" />
+			</Div>
+		</Div>
+	</Body>
+</Template>

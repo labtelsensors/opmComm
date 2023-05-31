@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Alignment="Top" Positioning="Content" >
+			<Label Alignment="Left" Text="Результаты:" ID="0" FontSize="24" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" >
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Маршруты:" ID="1"  Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="RouteCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+					<Label Alignment="Left" Text=" -"  FontSize="20" />
+					<Data Alignment="Left" DataSource="User" Field="RouteCountWithData" FontSize="20" />
+					<Label Alignment="Left" Text=" с результатами" ID="2"  FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Кабели:" ID="3" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="CableCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+					<Label Alignment="Left" Text=" -"  FontSize="20" />
+					<Data Alignment="Left" DataSource="User" Field="CableCountWithData" FontSize="20" />
+					<Label Alignment="Left" Text=" с результатами" ID="4"  FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Волокна:" ID="5" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="FiberCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Трассы:" ID="6" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="TraceCount" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="SM трассы:" ID="7" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="MM трассы:" ID="8" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Результаты OLTS / OPM:" ID="10" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSOPMResults" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Результаты измерений OLTS" ID="11" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSFibers" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Результаты измерений OPM:" ID="12" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OPMFibers" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Изображение конца волокна:" ID="9" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="Images" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Протестировано SM длин волн:" ID="13" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Протестировано MM длин волн:" ID="14" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+
+		</Div>
+
+	</Body>
+</Template>

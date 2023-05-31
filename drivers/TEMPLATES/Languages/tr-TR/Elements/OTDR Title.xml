@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Alignment="Top" Positioning="Content"  >
+			<Label Text="OTDR Sonuçları" ID="0" FontSize="16" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="10,0,0,0" >
+			<Div RequiredElement="False" Positioning="Percentage" Alignment="Left" Width="100">
+				<Div Positioning="Content" Alignment="Top" >
+					<Data DataSource="OTDRInfo" Field="Filename" FontSize="10" />
+				</Div>
+			</Div>
+		</Div>
+
+	</Body>
+</Template>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+			<Label Alignment="HorizCenter" Text="工作总结" ID="0" FontSize="36" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="0,20,0,0" >
+			<Div Positioning="Content" Alignment="Left" >
+				<Template FileName="ResultsFull.xml"  />
+			</Div>
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="0,20,0,0">
+			<Label Alignment="Left" Text="当前路径：" ID="1" FontSize="20" />
+			<Data Alignment="Left" DataSource="User" Field="CurrentPath" Wrap="True" FontSize="20" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" >
+			<Label Alignment="Left" Text="*计数结果发现的物品代表" ID="2" FontSize="20" />
+		</Div>
+		<Div Alignment="Top" Positioning="Content" Padding="20,0,0,0" >
+			<Label Alignment="Left" Text="数据验证还没有完成" ID="3" FontSize="20" />
+		</Div>
+
+	</Body>
+</Template>

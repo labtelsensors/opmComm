@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Teljes méretű OTDR grafikon a fő hullámhosszon és egyéb hullámhosszt a vizsgált szál jelenik meg az összehasonlítás. Az esemény táblázat a fő hullámhosszú látható a grafikon alatt található. Ez a jelentés generál egy oldalt minden hullámhosszon az egyes szálak.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="OTDR Event Table.xml" />
+		<Template FileName="Trace Summary.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="TIA-568-C-HORIZ-SM"
+		  TestPort="Singlemode"
+		  Units="dB"
+		  LossThreshType="None"
+		  Description="TIA/EIA-568-C, horizontal cables, singlemode fiber."
+		  UseType="Horiz"
+		  CatType="TIA"
+		  Rev="C"
+		  StdType="Cabling" Version="1.0.1"
+		  LengthThreshType="Rule">
+		<MaxLength Units="Meters">90</MaxLength>
+	</Rule>
+</Rules>

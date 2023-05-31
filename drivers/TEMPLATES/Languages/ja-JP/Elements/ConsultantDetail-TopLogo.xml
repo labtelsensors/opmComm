@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10" Width="100" Conditional="Settings.IncludeConsultantLogoInfo=True OR Settings.IncludeConsultantInfo=True" >
+
+			<Div Positioning="Content" Alignment="Top" Height="40" Conditional="Settings.IncludeConsultantLogoInfo=True" >
+				<ImageElement FileName="ConsultantLogo" Alignment="Center" Sizing="FixedAspect" />
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0" Conditional="Settings.IncludeConsultantInfo=True" >
+				<Div Positioning="Content" Alignment="HorizCenter">
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Data DataSource="Settings" Field="ConsultantCompanyName" Alignment="HorizCenter" FontSize="20" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Data DataSource="Settings" Field="ConsultantAddress" Alignment="HorizCenter" FontSize="15" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Div Positioning="Content" Alignment="HorizCenter">
+							<Data Alignment="Left" DataSource="Settings" Field="ConsultantCity" FontSize="15" />
+							<Label Alignment="Left" Text=", " FontSize="15" Conditional="Settings.ConsultantCity=True AND Settings.ConsultantState=True"/>
+							<Data Alignment="Left" DataSource="Settings" Field="ConsultantState" FontSize="15" />
+							<Label Alignment="Left" Text=" " FontSize="15" />
+							<Data Alignment="Left" DataSource="Settings" Field="ConsultantPostalCode" FontSize="15" />
+							<Label Alignment="Left" Text=" " FontSize="15" />
+							<Data Alignment="Left" DataSource="Settings" Field="ConsultantCountry" FontSize="15" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Div Positioning="Content" Alignment="Center">
+
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.ConsultantContact.Length>0">
+								<Label Positioning="Percentage" Text="連絡先：" ID="0" Width="20" FontSize="12" />
+								<Data DataSource="Settings" Field="ConsultantContact" FontSize="12" />
+							</Div>
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.ConsultantPhone.Length>0">
+								<Label Positioning="Percentage" Text="電話番号：" ID="1" FontSize="12" Width="20" />
+								<Data DataSource="Settings" Field="ConsultantPhone" FontSize="12" />
+							</Div>
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.ConsultantEmail.Length>0">
+								<Label Positioning="Percentage" Text="Eメール：" ID="2"  Width="20" FontSize="12" />
+								<Data DataSource="Settings" Field="ConsultantEmail" FontSize="12" />
+							</Div>
+
+						</Div>
+
+					</Div>
+
+				</Div>
+
+			</Div>
+		</Div>
+	</Body>
+</Template>

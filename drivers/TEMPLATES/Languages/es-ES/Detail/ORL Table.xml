@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>Pérdida OLTS (AVE w si Bi-Dir) y ORL (datos T500) con Resultados de Inspección</Description>
+			<HelpText>Pérdida de energía o el cuadro w Ave y ORL \ nFiber Número, longitud de onda resultados de la pérdida de dirección con \ pérdida de la nave y ORL para las fibras como prueba utilizando T500. \ NReport plantilla también se puede utilizar para generar la pérdida promedio de bi-direccional mediciones de pérdida OPM</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="AutoTest Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="ORL Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

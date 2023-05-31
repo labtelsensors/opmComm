@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>OTDR 多重檢視軌跡不含「通過/失敗」、「事件圖」和「完整 OLTS 表格」</Description>
+			<HelpText>OTDR 產生的「多重檢視」配置會包含\n「事件表」。\n每個光纖的「事件圖」。完整 OLTS 損耗表格。</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="AutoTest Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" >
+			<Template FileName="OLTS_OPM Table.xml" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,20" >
+			<Template FileName="OLTS Application Rules.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Conditional="HasOPM" RequiredElement="False" Positioning="Content" Alignment="Top" Padding="10,35,20,5"  >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,30,20,0" Alignment="Left"/>
+      </Div>
+    </Div>
+		<PageBreak />
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+
+		<Template FileName="OTDR Fiber Report Block.xml" Section="SingleMode|AZ" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="OTDR Title.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Graphs.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Graph.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Events.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Event Table.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" >
+			<Template FileName="Event Map.xml" Section="SingleMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OPMInfo.ContainsCurrentFiber=True" >
+			<Template FileName="OLTS_OPM Block.xml" Section="SingleMode|AZ" />
+		</Div>
+    <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="SingleMode|AZ" >
+
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="SingleMode|AZ" />
+      </Div>
+    </Div>
+		<PageBreak />
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+
+		<Template FileName="OTDR Fiber Report Block.xml" Section="SingleMode|ZA" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="OTDR Title.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Graphs.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Graph.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Events.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Event Table.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" >
+			<Template FileName="Event Map.xml" Section="SingleMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OPMInfo.ContainsCurrentFiber=True" >
+			<Template FileName="OLTS_OPM Block.xml" Section="SingleMode|ZA" />
+		</Div>
+    <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="SingleMode|ZA" >
+
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="SingleMode|ZA" />
+      </Div>
+    </Div>
+		<PageBreak />
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+
+		<Template FileName="OTDR Fiber Report Block.xml" Section="MultiMode|AZ" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="OTDR Title.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Graphs.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Graph.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Events.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Event Table.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" >
+			<Template FileName="Event Map.xml" Section="MultiMode|AZ" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OPMInfo.ContainsCurrentFiber=True" >
+			<Template FileName="OLTS_OPM Block.xml" Section="MultiMode|AZ" />
+		</Div>
+    <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="MultiMode|AZ" >
+
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="MultiMode|AZ" />
+      </Div>
+    </Div>
+		<PageBreak />
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+
+		<Template FileName="OTDR Fiber Report Block.xml" Section="MultiMode|ZA" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="OTDR Title.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Graphs.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Graph.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count>1" >
+			<Template FileName="Dual Indexed OTDR Events.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OTDRInfo.Traces.Count=1" >
+			<Template FileName="Single Indexed OTDR Event Table.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" >
+			<Template FileName="Event Map.xml" Section="MultiMode|ZA" />
+		</Div>
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,0" Conditional="OPMInfo.ContainsCurrentFiber=True" >
+			<Template FileName="OLTS_OPM Block.xml" Section="MultiMode|ZA" />
+		</Div>
+    <Div Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" Conditional="HasInspectionImage AND OTDRInfo.Traces.Count>1" Section="MultiMode|ZA" >
+
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageWithPF Index="0" Padding="10,0,20,0" Alignment="Left" Section="MultiMode|ZA" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="ISO-11801"
+		  TestPort="Multimode"
+		  Units="dBm"
+		  LossThreshType="FiberLoss"
+		  Description="ISO 11801 (International Standard) all cables, 50 or 62.5 μm fiber."
+		  CatType="ISO"
+		  StdType="Cabling" Version="1.0.1">
+		<LossThreshold WL="850"
+					   Min="0"
+					   Max="3.5"></LossThreshold>
+		<LossThreshold WL="1300"
+					   Min="0"
+					   Max="1.5"></LossThreshold>
+		<MaxLength Units="Meters">2000</MaxLength>
+		<LossPerSplice>0.3</LossPerSplice>
+		<LossPerConnector>0.75</LossPerConnector>
+	</Rule>
+</Rules>

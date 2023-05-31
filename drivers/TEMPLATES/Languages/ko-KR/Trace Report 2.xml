@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>섬유 시험 비교 표시되는 기본 파장이 다른 파장과 가득 차있는 크기 OTDR 그래프입니다. 파장 주요 그래프 아래에 표시되는 이벤트 테이블. 이 리포트는 각 각 섬유에 대한 파장에 대한 페이지를 생성합니다.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="OTDR Event Table.xml" />
+		<Template FileName="Trace Summary.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

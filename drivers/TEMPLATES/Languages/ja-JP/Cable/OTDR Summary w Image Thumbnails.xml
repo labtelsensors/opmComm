@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>長さ、リンク損失、リンクORL、イベントマップ、端面画像、ケーブル概要を示します。
+        波形データは表示しません。</HelpText>
+			<Description>端面画像つきケーブルの概要</Description>
+		</PageSettings>
+    <Footer RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Bottom" Height="3" Padding="5,5,5,5" >
+
+      <Div Positioning="Content" Alignment="Center" Padding="5,5,5,5"  >
+        <PageNumber Alignment="Left" FontSize="10" Text="Page ###" />
+      </Div>
+
+    </Footer>
+		<Div Section="CoverPage" RenderOption="OncePerCable" Order="3" Padding="40,40,40,40" >
+
+			<Div Conditional="HasTrace AND OTDRInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="10,35,10,10" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,5" >
+									<Label Text="ケーブルの概要" ID="0" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="0,0,0,5" >
+									<Label Text="ケーブルID：" ID="1" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OTDRInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+              <Div Positioning="Content" Alignment="Top" Width="100" >
+                <Div Positioning="Content" Alignment="HorizCenter" Padding="0,0,0,0"  >
+                  <Data Alignment="HorizCenter" DataSource="ReportPrepDate" Field="ProjectDatePrepared"  FontSize="20"  />
+                </Div>
+              </Div>
+
+            </Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="15" Padding="5,5,5,5" />
+						</Div>
+					</Div>
+				</Div>
+
+				<Template FileName="Fiber Optic Report Block no Fiber.xml" Alignment="HorizCenter" Padding="0,10,0,10"/>
+
+				<Div Alignment="Top" Positioning="Content" Padding="2,10,2,2" >
+					<Label Text="OTDRの概要" ID="2" FontSize="16"/>
+				</Div>
+
+				<Div RequiredElement="False" Alignment="Top" Padding="2,2,2,2" Positioning="Content">
+					<Label Text="長さ" ID="3" FontSize="12"/>
+					<Data DataSource="OTDRInfo" Index="0" Field="LinkLength" FontSize="12"/>
+					<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnits" FontSize="12"/>
+				</Div>
+				<OTDRLossTable Alignment="Top" Format="0.00" Padding="5,5,5,5" />
+
+				<Div Alignment="Top" Positioning="Percentage" Height="3" Padding="2,10,2,2">
+					<Label Text="画像のサムネイル" ID="0" FontSize="16" Padding="2,10,2,2" />
+				</Div>
+
+        <ImageSummaryWithPF Alignment="Top" Padding="10,10,10,10" />
+
+			</Div>
+
+			<Div Conditional="HasNoTrace AND OPMInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,20">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,35,20,20" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+									<Label Text="ケーブルの概要" ID="4" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+									<Label Text="ケーブルID：" ID="5" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OPMInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="15" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+					<Div Alignment="Center" Positioning="Content" Width="80" Padding="20,20,20,20" >
+
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="OLTS / OPMの結果：" ID="6" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMCount" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="測定波長：" ID="7" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMWavelengths" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="結果証明を含む" ID="8" Width="50" FontSize="20" Conditional="Cable.HasATResults=True" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+						</Div>
+
+					</Div>
+				</Div>
+        <ImageSummaryWithPF Alignment="Top" Padding="10,10,10,10" />
+			</Div>
+			<Div Conditional="HasNoTrace AND OPMInfo.CableID.Length=0 AND HasImage">
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,35,20,20" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+									<Label Text="ケーブルの概要" ID="0" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+									<Label Text="ケーブルID：" ID="1" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="ImageInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="15" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+				</Div>
+
+				<Div Alignment="Top" Positioning="Percentage" Height="3" Padding="2,10,2,2">
+					<Label Text="画像のサムネイル" ID="1" FontSize="16" Padding="2,10,2,2" />
+				</Div>
+
+        <ImageSummaryWithPF Alignment="Top" Padding="10,10,10,10" />
+			</Div>
+		</Div>
+
+	</Body>
+</Template>

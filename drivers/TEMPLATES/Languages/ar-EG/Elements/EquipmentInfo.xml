@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top"  >
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="الرئيسية النموذجي # :" ID="0" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="MainModel" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="# المسلسل الرئيسية :" ID="1" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="MainSerialNumber" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top"  >
+						<Label Text="الرئيسية معايرة التاريخ :" ID="2" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="MainCalDate" FontSize="12" Format="Short" Conditional="OPMInfo.MainCalDate.IsValidDate=True"/>
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="بعيد النموذجي # :" ID="3" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="RemoteModel" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="بعيد المسلسل # :" ID="4" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="RemoteSerialNumber" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="بعيد معايرة التاريخ :" ID="5" Positioning="Percentage" Width="50" FontSize="12" />
+						<Data DataSource="OPMInfo" Field="RemoteCalDate" FontSize="12" Format="Short" Conditional="OPMInfo.RemoteCalDate.IsValidDate=True"/>
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

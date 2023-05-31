@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="20,0,20,0" Conditional="OPMInfo.ContainsCurrentFiber=True">
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Content" Alignment="Top" Width="100" Padding="5,10,5,5" >
+					<Label Text="Risultati OPM" ID="0" FontSize="14" />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="10,2,0,0" Width="100">
+					<Data DataSource="OPMFiberInfo" Field="Filename" Padding="2,2,2,2" FontSize="10" />
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top">
+				<OPM_Table SingleFiber="True" Positioning="Percentage" Width="100" Padding="5,5,5,5" Format="0.00" />
+			</Div>
+		</Div>
+	</Body>
+</Template>

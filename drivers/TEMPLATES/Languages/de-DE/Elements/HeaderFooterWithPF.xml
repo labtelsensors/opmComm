@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+  <Body>
+
+    <Header RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Top" Width="100" Height="8" Padding="20,10,20,8" >
+
+      <Div Positioning="Percentage" Alignment="Left" Width="100" Conditional="Settings.IncludeCustomerLogoInfo=True" >
+        <Div Positioning="Content" Alignment="Top" BorderStyle="OuterRadius" ForeColor="LightGray" Width="100" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0">
+
+          <Div Alignment="VertCenter" Padding="5,5,5,5" >
+
+            <Div Positioning="Percentage" Alignment="Left" Height="100" Width="20" >
+              <ImageElement FileName="CustomerLogo" Positioning="Percentage"  Alignment="VertCenter" Sizing="FixedAspect" />
+            </Div>
+            <Div Positioning="Percentage" Alignment="Left" Render="Once" Width="60" Height="80" Padding="10,10,10,10" >
+              <Div Positioning="Content" Alignment="HorizCenter" Width="100" Height="40" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0">
+                <Div Alignment="HorizCenter" Width="100">
+                  <Data Alignment="HorizCenter" DataSource="Settings" Field="ProjectJobName" Wrap="True" Width="100" FontSize="14" Conditional="Settings.ProjectJobName.Length>0"/>
+                  <Data Alignment="HorizCenter" DataSource="JobClass" Field="Name" Wrap="True" Width="100" FontSize="14" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+                </Div>
+              </Div>
+              <Div Positioning="Content" Alignment="Bottom" Width="100" Height="40">
+                <Div  Alignment="HorizCenter" Width="100" >
+                  <Data Alignment="HorizCenter" DataSource="ReportPrepDate" Field="ProjectDatePrepared"  Width="100" Wrap="True" FontSize="14"  />
+                </Div>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+        <Div Positioning="Percentage" Alignment="Floating" X="80" Y="2.8" Height="60" Width="10" >
+          <ImageElement FileName="AflLogo.png" Positioning="Content"  Alignment="Left" Sizing="FixedAspect" />
+        </Div>
+      </Div>
+      <Div Positioning="Percentage" Alignment="Left" Width="100"  Conditional="Settings.IncludeCustomerLogoInfo=False" >
+        <Div Positioning="Content" Alignment="Top" BorderStyle="OuterRadius" ForeColor="LightGray" Width="100" Height="100" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0">
+          <Div Alignment="VertCenter" Padding="5,5,5,5" >
+
+            <Div Positioning="Percentage" Alignment="Center" Render="Once" Width="100" Height="100" Padding="10,10,10,10" >
+              <Div Positioning="Content" Alignment="Top" Width="100" Height="50" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0">
+                <Div Alignment="HorizCenter" Width="100">
+                  <Data Alignment="HorizCenter" DataSource="Settings" Field="ProjectJobName" Wrap="True" FontSize="14" Conditional="Settings.ProjectJobName.Length>0"/>
+                  <Data Alignment="HorizCenter" DataSource="JobClass" Field="Name" Wrap="True" FontSize="14" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+                </Div>
+              </Div>
+              <Div Positioning="Content" Alignment="Bottom" Width="100" Height="40">
+                <Div  Alignment="HorizCenter" Width="100" >
+                  <Data Alignment="HorizCenter" DataSource="ReportPrepDate" Field="ProjectDatePrepared"  Width="100" Wrap="True" FontSize="14"  />
+                </Div>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+        <Div Positioning="Percentage" Alignment="Floating" X="80" Y="2.8" Height="60" Width="10" >
+          <ImageElement FileName="AflLogo.png" Positioning="Percentage"  Alignment="Left" Sizing="FixedAspect" />
+        </Div>
+
+      </Div>
+
+      <Div Positioning="Percentage" Alignment="Left" Width="100" Conditional="Settings.IncludeCustomerLogoInfo=False AND Settings.ProjectJobName.Length=0 AND JobClass.Name.Length=0" >
+        <Div Positioning="Content" Alignment="Top" BorderStyle="OuterRadius" ForeColor="LightGray" Width="100" >
+
+          <Div Positioning="Percentage" Alignment="Center" Width="100" Height="100" Padding="10,10,10,10" >
+            <Div Positioning="Content" Alignment="Center" >
+              <Label Text="Ergeb." ID="1" Positioning="Percentage" Alignment="Left" Width="15" FontSize="14" />
+            </Div>
+          </Div>
+        </Div>
+        <Div Positioning="Percentage" Alignment="Floating" X="80" Y="2.8" Height="60" Width="10" >
+          <ImageElement FileName="AflLogo.png" Positioning="Percentage"  Alignment="Left" Sizing="FixedAspect" />
+        </Div>
+
+      </Div>
+
+    </Header>
+
+    <Footer RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Bottom" Height="3" Padding="5,5,5,5" >
+
+      <Div Positioning="Content" Alignment="Center" Padding="5,5,5,5"  >
+        <PageNumber Alignment="Left" FontSize="10" Text="Page ###" />
+      </Div>
+
+    </Footer>
+
+  </Body>
+</Template>

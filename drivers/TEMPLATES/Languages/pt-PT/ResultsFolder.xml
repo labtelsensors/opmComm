@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+			<Label Alignment="HorizCenter" Text="Folder Resumo" ID="0" FontSize="36" />
+		</Div>
+		<Div Alignment="Top" Positioning="Content">
+			<Label Alignment="Left" Text="Caminho atual:" ID="1" FontSize="20" />
+			<Data Alignment="Left" DataSource="User" Field="CurrentPath" Wrap="True" FontSize="20" />
+		</Div>
+	</Body>
+</Template>

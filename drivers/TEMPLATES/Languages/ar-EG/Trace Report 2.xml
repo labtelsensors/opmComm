@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>كامل مع الرسم البياني OTDR حجم الطول الموجي الرئيسية وموجات أخرى لاختبار الألياف يظهر للمقارنة. يتم عرض جدول الحدث من الطول الموجي الرئيسية أدناه الرسم البياني. هذا التقرير بإنشاء صفحة لكل طول موجي لكل من الألياف.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="OTDR Event Table.xml" />
+		<Template FileName="Trace Summary.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

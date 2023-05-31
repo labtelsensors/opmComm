@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="20,0,20,0" >
+			<Div Positioning="Percentage" Alignment="Left" Width="50" >
+				<Label Text="OTDR 결과" ID="0" Alignment="Left" FontSize="16" />
+			</Div>
+			<Div Positioning="Percentage" Alignment="Right" Width="50" >
+				<Div Positioning="Content" Alignment="Right" >
+					<Label Text="파장 :" ID="1" FontSize="14" />
+					<Div Positioning="Content" Alignment="Right" >
+						<Data DataSource="OTDRInfo" Field="Wavelength" FontSize="14" />
+						<Label Text="나노" ID="2" Alignment="Left" FontSize="14" />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+		
+		<Div Positioning="Content" Alignment="Top" Padding="30,0,0,0" >
+			<Div RequiredElement="False" Positioning="Percentage" Alignment="Left" Width="100">
+				<Div Positioning="Content" Alignment="Top" >
+					<Data DataSource="OTDRInfo" Field="Filename" FontSize="10" />
+				</Div>
+			</Div>
+		</Div>
+
+
+		<Div Positioning="Content" Alignment="Top" Height="5" Padding="20,5,20,5" BackColor="LightGray">
+			<TraceGraph Overlay="True" Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5"  />
+		</Div>
+	</Body>
+</Template>

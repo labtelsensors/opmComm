@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+      <InspectionReport>true</InspectionReport>
+			<Description>Solo Ispezione Connettore (12 risultati per pagina)</Description>
+			<HelpText>Immagini Ispezione Connettore con risultati Passato/Fallito, se salvate, 12 immagini per pagina.</HelpText>
+		</PageSettings>
+
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+      <InspectionReport>true</InspectionReport>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="Image Small Table.xml"  />
+
+	
+		
+
+	</Body>
+</Template>
+

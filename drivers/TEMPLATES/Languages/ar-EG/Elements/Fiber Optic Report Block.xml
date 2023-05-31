@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="20,0,20,0" >
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Div Positioning="Percentage" Alignment="Left" >
+						<Label Text="معرف كبل :" ID="0" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="CableID" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="رقم الألياف" ID="1" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Field="FiberNumber" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="المنفذ :" ID="2" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="FiberType" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="نوع الألياف" ID="3" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="CableType" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="تدشين الكابل :" ID="4" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDREnum" Index="0" Field="LaunchCableType" FontSize="12" />
+						<Div Positioning="Content" Conditional="OTDREnum.LaunchCableType=User">
+							<Label Text="(" FontSize="12"/>
+							<Data DataSource="OTDRInfo" Index="0" Field="UserOffset" FontSize="12" />
+							<Data DataSource="Settings" Field="DistanceUnits" FontSize="12" />
+							<Label Text=")" FontSize="12"/>
+						</Div>
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="ذيل كبل :" ID="5" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDREnum" Index="0" Field="ReceiveCableType" FontSize="12" />
+						<Div Positioning="Content" Conditional="OTDREnum.ReceiveCableType=User">
+							<Label Text="(" FontSize="12"/>
+							<Data DataSource="OTDRInfo" Index="0" Field="ReceiveCableLength" FontSize="12" />
+							<Data DataSource="Settings" Field="DistanceUnits" FontSize="12" />
+							<Label Text=")" FontSize="12"/>
+						</Div>
+					</Div>
+				</Div>
+
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Div Positioning="Percentage" Alignment="Left" >
+						<Label Text="نهاية 1 :" ID="6" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndOneSite" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="جير :" ID="7" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="IOR" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="45">
+						<Label Text="  معمل الخلفية :" ID="8" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="BackscatterCoef" FontSize="12" />
+						<Label Text="dB" ID="9" Alignment="Left" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="OTDR الإعداد :" ID="10" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="TestMode" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="نهاية العتبة :" ID="11" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndThreshold" FontSize="12" />
+						<Label Text="dB" ID="12" Alignment="Left" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="خسارة العتبة :" ID="13" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="LossThreshold" FontSize="12" />
+						<Label Text="dB" ID="14" Alignment="Left" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="Refl العتبة :" ID="15" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="ReflThreshold" FontSize="12" />
+						<Label Text="dB" ID="16" Alignment="Left" FontSize="12" />
+					</Div>
+				</Div>
+
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Div Positioning="Percentage" Alignment="Left" >
+						<Label Text="نهاية 2 :" ID="17" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndTwoSite" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="نموذج :" ID="18" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Data DataSource="OTDRInfo" Alignment="Left" Field="MainFrameID" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="مسلسل # :" ID="19" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="MainFrameSN" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="برنامج أصدار :" ID="20" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="SoftwareRev" FontSize="12" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="تاريخ المعايرة" ID="21" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="CalDate" FontSize="12" Conditional="OTDRInfo.CalDate.0.IsValidDate=True"/>
+						<Label Text="ن / ا" ID="0" FontSize="12" Conditional="OTDRInfo.CalDate.0.IsValidDate!=True"/>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="عامل 1 :" ID="22" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="Operator" FontSize="12" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="عامل 2 :" ID="23" Alignment="Left" FontSize="12" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="Operator2" FontSize="12" />
+					</Div>
+				</Div>
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

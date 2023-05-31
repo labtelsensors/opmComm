@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+  <Rule Name="FDDI-62.5" 
+		TestPort="Multimode" 
+		Units="dB" 
+		LossThreshType="TotalLoss" 
+		Description="FDDI on 62.5μm fiber." 
+		CatType="FDDIPMD"
+		FTA="OM1_62_5_125um"
+		StdType="Application" Version="1.0.0">
+    <LossThreshold WL="1300" 
+				   Min="0" 
+				   Max="11.0"></LossThreshold>
+    <MaxLength Units="Meters">2000</MaxLength>
+  </Rule>
+</Rules>

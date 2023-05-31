@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="100" Padding="5,8,5,0" Conditional="OPMInfo.ApplicationRules.Count>0">
+
+			<Div RenderOption="OncePerCable" Positioning="Percentage" Alignment="Left" Width="35">
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top">
+					<Label Text="Alkalmazások ezek a szálak is vizsgálták, hogy támogassák:" ID="0" />
+				</Div>
+			</Div>
+			
+			<Div RenderOption="OncePerCable" Positioning="Fill" Alignment="Left">
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.CablingRules.Count>0 AND OPMInfo.UserRules.Count>0 AND OPMInfo.UserRules.0.Passed=True">
+					<Data DataSource="OPMInfo" Field="UserRuleName" Index="0"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.0.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="0"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.1.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="1"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.2.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="2"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.3.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="3" />
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.4.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="4" />
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.5.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="5" />
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.6.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="6"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.7.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="7"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.8.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="8"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.9.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="9"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.10.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="10"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.11.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="11"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.12.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="12"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.13.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="13"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.14.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="14"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.15.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="15"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.16.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="16"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.17.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="17"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.18.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="18"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.19.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="19"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.20.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="20"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.21.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="21"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.22.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="22"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.23.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="23"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.24.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="24"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.25.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="25"/>
+				</Div>
+				<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="5,0,5,0" Conditional="OPMInfo.ApplicationRules.26.Passed=True">
+					<Data DataSource="OPMInfo" Field="ApplicationRuleName" Index="26"/>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="1200-MX-SN-I-50"
+		  TestPort="Multimode"
+		  Units="dB"
+		  LossThreshType="TotalLoss"
+		  Description="1200-MX-SN-I (10512Mbaud) (850 nm) on (OM2) 50 μm fiber"
+		  CatType="FibreChannel"
+		  FTA="OM2_50_125um"
+		  StdType="Application" Version="1.0.1">
+		<LossThreshold WL="850"
+					   Min="0.0"
+					   Max="2.2"></LossThreshold>
+		<MaxLength Units="Meters">82</MaxLength>
+	</Rule>
+</Rules>

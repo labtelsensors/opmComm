@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>路線標頭頁面會顯示有關路線的基本資訊。</HelpText>
+			<Description>路線摘要</Description>
+		</PageSettings>
+
+		<Div Section="CoverPage" Order="2" Padding="40,40,40,40" RenderOption="OncePerRoute" >
+
+			<Div Positioning="Content" Alignment="Top" Padding="0,0,0,20" >
+				<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="20,20,20,20" >
+
+						<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10">
+							<Div Positioning="Content" Alignment="HorizCenter" >
+								<Label Text="路線摘要" ID="0" FontSize="24" />
+							</Div>
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0">
+							<Div Positioning="Content" Alignment="HorizCenter" >
+								<Data Alignment="Left" DataSource="Settings" Field="ProjectJobName" Wrap="True" FontSize="20" Conditional="Settings.ProjectJobName.Length>0"/>
+								<Data Alignment="Left" DataSource="JobClass" Field="Name" FontSize="20" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+							</Div>
+						</Div>
+
+						<Div Positioning="Content"  Alignment ="Top" Padding="0,0,0,0">
+							<Div Positioning="Content" Alignment="HorizCenter" >
+								<Div Positioning="Content" Alignment="HorizCenter" >
+									<Data Alignment="Left" DataSource="Route" Field="End1" FontSize="20" />
+									<Label Alignment="Left" Text=" 至 " ID="1" FontSize="20" />
+									<Data Alignment="Left" DataSource="Route" Field="End2" FontSize="20" />
+								</Div>
+							</Div>
+						</Div>
+
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="20,20,20,20" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+				<Div Alignment="Center" Positioning="Content" Width="40" Padding="20,20,20,20" >
+
+					<Div Alignment="Top" Positioning="Content" >
+						<Div Alignment="Left" Positioning="Percentage" Width="8" >
+							<Data Alignment="Right" DataSource="Route" Field="CableCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Percentage" Text=" 光纜" ID="2" FontSize="20" />
+					</Div>
+
+					<Div Alignment="Top" Positioning="Content" >
+						<Div Alignment="Left" Positioning="Percentage" Width="8" >
+							<Data Alignment="Right" DataSource="Route" Field="FiberCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Percentage" Text=" 光纖" ID="3" FontSize="20" />
+					</Div>
+
+					<Div Alignment="Top" Positioning="Content" >
+						<Div Alignment="Left" Positioning="Percentage" Width="8" >
+							<Data Alignment="Right" DataSource="Route" Field="OPMCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Percentage" Text=" OLTS/OPM 光纖讀數" ID="4" FontSize="20" />
+					</Div>
+
+					<Div Alignment="Top" Positioning="Content" >
+						<Div Alignment="Left" Positioning="Percentage" Width="8" >
+							<Data Alignment="Right" DataSource="Route" Field="TraceCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Content" Text="軌跡:" ID="5" FontSize="20" />
+					</Div>
+
+					<Div Alignment="Top" Positioning="Content" Conditional="HasTrace">
+						<Div Alignment="Left" Positioning="Percentage" Width="8">
+							<Data Alignment="Right" DataSource="Route" Field="SingleModeTraceCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Content" Text=" 單模軌跡" ID="6" FontSize="20" />
+					</Div>
+
+					<Div Alignment="Top" Positioning="Content" Conditional="HasTrace">
+						<Div Alignment="Left" Positioning="Percentage" Width="8">
+							<Data Alignment="Right" DataSource="Route" Field="MultiModeTraceCount" FontSize="20" />
+						</Div>
+						<Label Alignment="Left" Positioning="Content" Text=" 多模軌跡" ID="7" FontSize="20" />
+					</Div>
+
+
+				</Div>
+
+			</Div>
+		</Div>
+	</Body>
+</Template>

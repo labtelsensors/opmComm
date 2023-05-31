@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Grafico OTDR Full size con i principali lunghezze d'onda lunghezze d'onda e le altre per la fibra di prova indicato per il confronto. La tabella del Main Event lunghezza d'onda è visualizzato sotto il grafico. Questa relazione genera una pagina per ogni lunghezza d'onda per ogni fibra.</HelpText>
+		</PageSettings>
+		
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="Multiple Trace Summary.xml" />
+		<Template FileName="Multiple OTDR Events.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

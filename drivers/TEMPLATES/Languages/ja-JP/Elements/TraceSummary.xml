@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Height="5" Padding="20,0,20,5" BackColor="LightGray">
+			<Div Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5" BackColor="White">
+				<Table DataSource="OTDRInfo" Alignment="Top" >
+					<Column Alignment="Left" AlignText="HorizCenter" Field="Fiber" Width="5">
+						<ColumnHeader AlignText="HorizCenter" Text="ファイバ番号" ID="0" BackColor="LightGray" />
+					</Column>
+					<Column AlignText="HorizCenter">
+						<Column AlignText="HorizCenter" Alignment="Top">
+							<ColumnHeader AlignText="HorizCenter" Text="Loss(dB) End 1 -> End 2" BackColor="LightGray" />
+						</Column>
+						<Column Alignment="Top">
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="Loss1AZ" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength1!Units" ID="1" />
+							</Column>
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="Loss2AZ" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength2!Units" ID="2" />
+							</Column>
+						</Column>
+					</Column>
+					<Column AlignText="HorizCenter">
+						<Column AlignText="HorizCenter" Alignment="Top">
+							<ColumnHeader AlignText="HorizCenter" Text="Loss(dB) End 2 -> End 1" BackColor="LightGray" />
+						</Column>
+						<Column Alignment="Top">
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="Loss1ZA" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength1!Units" ID="3" />
+							</Column>
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="Loss2ZA" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength2!Units" ID="4" />
+							</Column>
+						</Column>
+					</Column>
+					<Column AlignText="HorizCenter">
+						<Column AlignText="HorizCenter" Alignment="Top">
+							<ColumnHeader AlignText="HorizCenter" Text="ORL(dB) End 1 -> End 2" BackColor="LightGray" />
+						</Column>
+						<Column Alignment="Top">
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="ORL1AZ" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength1!Units" ID="5" />
+							</Column>
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="ORL2AZ" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength2!Units" ID="6" />
+							</Column>
+						</Column>
+					</Column>
+					<Column AlignText="HorizCenter">
+						<Column AlignText="HorizCenter" Alignment="Top">
+							<ColumnHeader AlignText="HorizCenter" Text="ORL(dB) End 2 -> End 1" BackColor="LightGray" />
+						</Column>
+						<Column Alignment="Top">
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="ORL1ZA" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength1!Units" ID="7" />
+							</Column>
+							<Column Positioning="Percentage" Width="50" AlignText="HorizCenter" Field="ORL2ZA" Format="0.00" MaintainRows="True">
+								<ColumnHeader AlignText="HorizCenter" Text="!WaveLength2!Units" ID="8" />
+							</Column>
+						</Column>
+					</Column>
+				</Table>
+			</Div>
+		</Div>
+	</Body>
+</Template>

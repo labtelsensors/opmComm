@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>Connector Inspection Only (2 results per page)</Description>
+			<HelpText>Connector Inspection Images with Pass/Fail results if saved, 2 images per page.</HelpText>
+		</PageSettings>
+
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="Image Large Table.xml"  />
+
+	
+		
+
+	</Body>
+</Template>
+

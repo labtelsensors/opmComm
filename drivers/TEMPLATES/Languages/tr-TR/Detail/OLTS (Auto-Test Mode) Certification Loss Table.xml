@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>OLTS (Otomatik Test Modu) Kayıp Tablosu ile birlikte kontrol sonuçları</Description>
+			<HelpText>Fiber numarası ve testin yönü ile kayıp (dB), uzunluk, kafa yüksekliği kaybı ve test tarihi/zamanına göre seçilen Kablolama Standardına dayanarak belirlenen Başarılı/Başarısız kriterlerini içeren Kayıp Tablosu.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooterWithPF.xml" />
+		<Template FileName="PassFail.xml" />
+		<Template FileName="AutoTest Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" Conditional="HasOPM">
+			<Template FileName="OLTS Table.xml" Padding="5,5,5,5" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

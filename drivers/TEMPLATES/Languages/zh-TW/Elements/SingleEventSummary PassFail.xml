@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Height="5" Padding="20,0,20,0" BackColor="LightGray">
+			<Div Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="# 個事件" ID="0" />
+						<Data Alignment="Top" Index="0" DataSource="OTDRInfo" Field="Events.Count" />
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5" Conditional="OTDRInfo.IsLinkLossFail.0.=True" BackColor="Pink">
+						<Label Alignment="Top" Text="連結損耗" ID="1" BackColor="Pink"/>
+						<Div Positioning="Content" Alignment="Top" BackColor="Pink" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkLoss" Function="n/1000" Format="0.00" BackColor="Pink"/>
+							<Label Text="dB" ID="2" BackColor="Pink" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5" Conditional="OTDRInfo.IsLinkLossFail.0.!=True">
+						<Label Alignment="Top" Text="連結損耗" ID="3" />
+						<Div Positioning="Content" Alignment="Top" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkLoss" Function="n/1000" Format="0.00"/>
+							<Label Text="dB" ID="4" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5" Conditional="OTDRInfo.IsLinkORLFail.0.=True" BackColor="Pink">
+						<Label Alignment="Top" Text="連結 ORL" ID="5" BackColor="Pink"/>
+						<Div Positioning="Content" Alignment="Top" BackColor="Pink" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkORL" Function="n/1000" Format="0.00" BackColor="Pink"/>
+							<Label Text="dB" ID="6" BackColor="Pink" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5" Conditional="OTDRInfo.IsLinkORLFail.0.!=True">
+						<Label Alignment="Top" Text="連結 ORL" ID="7" />
+						<Div Positioning="Content" Alignment="Top" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkORL" Function="n/1000" Format="0.00"/>
+							<Label Text="dB" ID="8" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="連結長度" ID="9" />
+						<Div Positioning="Content" Alignment="Top">
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkLength" />
+							<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnitsAbbrev" />
+						</Div>
+            <TLine X="0" Y="50" X2="100" Y2="50" />
+          </Div>
+          <Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+            <Label Alignment="Top" Text="連結 衰減" ID="10" />
+            <Div Positioning="Content" Alignment="Top">
+              <Data Index="0" DataSource="OTDRInfo" Field="dbkm" Format="0.000" />
+              <Label  ID ="11" Text="dB/km" />
+            </Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<PageSettings>
+		<Padding>10,10,10,10</Padding>
+		<Positioning>Absolute</Positioning>
+		<BackColor>255,255,255</BackColor>
+		<Border>None</Border>
+	</PageSettings>
+	<Body>
+		<Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Padding="20,0,20,0" Conditional="HasOPM">
+
+			<Div Positioning="Content" Alignment="Top"  >
+				<ORLTable Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" />
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

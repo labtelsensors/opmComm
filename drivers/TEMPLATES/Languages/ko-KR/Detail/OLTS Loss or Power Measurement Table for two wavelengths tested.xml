@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>두 개의 파장에 대한 OLTS 손실 또는 전력 측정 테이블 테스트</Description>
+			<HelpText>손실 또는 전원 표 : \ nfiber 번호, 방향 및 파장 테스트, \ (dB의) 또는 Power (dBm의 또는 와트) 섬유에 대한 손실 nshowing 테스트. \ 테스트 OPM 또는 자동으로 수행할 테스트 모드의 손실 결과 nReports. \ n이 패스를 생성하지 않습니다 / 리포트 템플릿 실패.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OLTS Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="OPM Table Header.xml" />
+			<Template FileName="OPM Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

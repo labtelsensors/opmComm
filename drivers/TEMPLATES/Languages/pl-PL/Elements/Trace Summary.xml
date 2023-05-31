@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Padding ="20,0,20,5" Positioning="Content" Alignment="Top" BackColor="LightGray">
+			<OTDRTable Index="0" Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" Padding="5,5,5,5" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=false ">
+			<Label Text="* - nie zawiera Rozbiegówek i Dobiegówek" ID="0" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=true ">
+			<Label Text="* - nie zawiera Rozbiegówki" ID="1" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=true AND OTDRInfo.ReceiveCable=false " BackColor="Orange">
+			<Label Text="* - nie zawiera Dobiegówek" ID="2" />
+		</Div>
+	</Body>
+</Template>

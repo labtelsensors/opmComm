@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report TimeStamp="01/30/2008 07:42:34">
+    <Customer>
+        <Name>STMORITZ</Name>
+        <Location>WHITE TURF/ICE RINK</Location>
+    </Customer>
+    <Contractor>
+        <Operator>SUZY</Operator>
+        <OperatorTwo>PATRICK</OperatorTwo>
+    </Contractor>
+    <Instrument Manufacturer="Noyes" Model="M700" AppVersion="1.2.41" CodeVersion="1.0.0" />
+    <Records Count="6" CableID="SM TACT 24">
+        <Record FiberNumber="1">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.43" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:12" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.09" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:12" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.68" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:12" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.54" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:12" />
+        </Record>
+        <Record FiberNumber="2">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.44" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:20" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.09" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:15" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.67" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:20" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.54" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:15" />
+        </Record>
+        <Record FiberNumber="3">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.45" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:24" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.10" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:25" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.67" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:24" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.58" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:25" />
+        </Record>
+        <Record FiberNumber="4">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.48" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:27" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.14" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:28" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.71" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:27" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.58" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:28" />
+        </Record>
+        <Record FiberNumber="5">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.49" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:29" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.14" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:30" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.66" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:29" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.64" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:30" />
+        </Record>
+        <Record FiberNumber="6">
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.44" Units="dBm" Reference="-9.28" Direction="Z to A" TimeStamp="01/30/2008 07:42:34" />
+            <PowerData MeasurementType="Power" WL="1310" WLUnits="nm" Value="-14.19" Units="dBm" Reference="-9.28" Direction="A to Z" TimeStamp="01/30/2008 07:41:32" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.67" Units="dBm" Reference="-7.53" Direction="Z to A" TimeStamp="01/30/2008 07:42:34" />
+            <PowerData MeasurementType="Power" WL="1550" WLUnits="nm" Value="-11.57" Units="dBm" Reference="-7.53" Direction="A to Z" TimeStamp="01/30/2008 07:41:32" />
+        </Record>
+    </Records>
+</Report>

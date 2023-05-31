@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Section="CoverPage" Order="0">
+			<Div Positioning="Content" Alignment="Center">
+				<Label Text="希望するレポートのデータを選択してください" ID="0" FontSize="20"/>
+			</Div>
+		</Div>
+	</Body>
+</Template>

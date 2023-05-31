@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray">
+			<TraceEventTable ShowPassFail="False" Index="0" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+			<TraceEventTable ShowPassFail="False" Index="1" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+		</Div>
+		<Template FileName="DualEventSummary.xml" />
+	</Body>
+</Template>

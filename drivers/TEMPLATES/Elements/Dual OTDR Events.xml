@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Height="5" Padding="5,5,5,5" BackColor="LightGray" >
+			<TraceEventTable Wavelength="1310" Direction="AZ" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+			<TraceEventTable Wavelength="1550" Direction="AZ" Positioning="Percentage" Alignment="Left" Width="50" Padding="5,5,5,5"  />
+		</Div>
+	</Body>
+</Template>
+		

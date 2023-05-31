@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Height="4" Padding="5,5,5,5" >
+			<Div Positioning="Content" Alignment="Top" >
+				<Label Text="OLTS 손실 측정" ID="0" Alignment="Left" Padding="2,2,2,2" FontSize="16" />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="0,2,0,0" >
+				<Div Positioning="Percentage" Alignment="Left" Width="100">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OPMFiberInfo" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

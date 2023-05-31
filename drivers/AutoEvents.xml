@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Modules>
+	<EventAnalysisSettings>
+		<Macrobend_Threshold>0.2</Macrobend_Threshold>
+		<Macrobend_Event_Location_Variance_Pulse_Width_Multiplier>2.0</Macrobend_Event_Location_Variance_Pulse_Width_Multiplier>
+		<Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_NonreflectiveEvent>2.0</Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_NonreflectiveEvent>
+		<Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_ReflectiveEvent>2.0</Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_ReflectiveEvent>
+		<Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_MutipleEvent>2.0</Bidirectional_Event_Location_Variance_Pulse_Width_Multiplier_MutipleEvent>
+	</EventAnalysisSettings>
+	<Thresholds>
+		<Default>
+			<TR_REFL_THRESH>-57.0</TR_REFL_THRESH>
+			<THRESH_Offset_0850>1440</THRESH_Offset_0850>
+			<THRESH_Offset_1300>265</THRESH_Offset_1300>
+			<THRESH_Offset_1310>160</THRESH_Offset_1310>
+			<THRESH_Offset_1550>85</THRESH_Offset_1550>
+
+			<THRESH_DETECT>4000</THRESH_DETECT>
+			<THRESH_RELEASE>400</THRESH_RELEASE>
+			<THRESH_Falling>1000</THRESH_Falling>
+
+			<THRESHOLD_ScanNoiseLimit>6000</THRESHOLD_ScanNoiseLimit>		
+			<THRESHOLD_InProbeCount>4</THRESHOLD_InProbeCount>			
+			<THRESHOLD_RefEventStartDet>-900</THRESHOLD_RefEventStartDet>	
+			<THRESHOLD_RefEventRel>-400</THRESHOLD_RefEventRel>		
+			<THRESHOLD_NonRefEventDet>50</THRESHOLD_NonRefEventDet>		
+			<THRESHOLD_NonRefEventRel>50</THRESHOLD_NonRefEventRel>		
+
+			<FAR_LEFT_LSA_OFFSET>10</FAR_LEFT_LSA_OFFSET>			
+			<LEFT_LSA_LENGTH>9</LEFT_LSA_LENGTH>				
+			<FAR_RIGHT_LSA_OFFSET>10</FAR_RIGHT_LSA_OFFSET>			
+			<RIGHT_LSA_LENGTH>9</RIGHT_LSA_LENGTH>				
+		</Default>
+	</Thresholds>
+	<DetermineFeatureWidthLimitDenom>
+		<Default>
+			<UseAltMethod value="0">
+				<TraceDXLength value="16000">160</TraceDXLength>
+				<TraceDXLength value="8000">80</TraceDXLength>
+				<TraceDXLength value="4000">40</TraceDXLength>
+				<TraceDXLength value="0">20</TraceDXLength>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<TraceDXLength value="0">20</TraceDXLength>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineFeatureWidthLimitDenom>
+	<DetermineWidthLimitRisingMultiplier>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="0">0.5</nPulseWidthInPoints>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthInPoints value="0">0.5</nPulseWidthInPoints>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="10">0.5</nPulseWidthInPoints>
+				<nPulseWidthInPoints value="0">0.0</nPulseWidthInPoints>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineWidthLimitRisingMultiplier>
+	<DetermineWidthLimitFallingMultiplier>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="0">1.5</nPulseWidthInPoints>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthInPoints value="0">1.0</nPulseWidthInPoints>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="100">1.5</nPulseWidthInPoints>
+				<nPulseWidthInPoints value="50">1.0</nPulseWidthInPoints>
+				<nPulseWidthInPoints value="0">0.0</nPulseWidthInPoints>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineWidthLimitFallingMultiplier>
+	<DetermineMAWindow>
+		<Default>
+			<UseAltMethod value="0">
+				<TraceDXLength value="16000">40</TraceDXLength>
+				<TraceDXLength value="8000">20</TraceDXLength>
+				<TraceDXLength value="4000">10</TraceDXLength>
+				<TraceDXLength value="0">5</TraceDXLength>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<TraceDXLength value="0">10</TraceDXLength>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<TraceDXLength value="16000">60</TraceDXLength>
+				<TraceDXLength value="8000">30</TraceDXLength>
+				<TraceDXLength value="4000">15</TraceDXLength>
+				<TraceDXLength value="0">8</TraceDXLength>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineMAWindow>
+	<DetermineSlopeThreshold>
+		<Default>
+			<UseAltMethod value="0">500</UseAltMethod>
+		</Default>		
+	</DetermineSlopeThreshold>
+	<DetermineFilterOffset>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="200">10</nPulseWidthNS>
+				<nPulseWidthNS value="50">100</nPulseWidthNS>
+				<nPulseWidthNS value="0">120</nPulseWidthNS>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthNS value="0">10</nPulseWidthNS>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="0">0</nPulseWidthNS>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineFilterOffset>
+	<DetermineFilterOffset2ndPass>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="200">40</nPulseWidthNS>
+				<nPulseWidthNS value="50">130</nPulseWidthNS>
+				<nPulseWidthNS value="0">150</nPulseWidthNS>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthNS value="0">20</nPulseWidthNS>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="0">30</nPulseWidthNS>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineFilterOffset2ndPass>
+	<DetermineFilterFactor>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="200">1</nPulseWidthNS>
+				<nPulseWidthNS value="50">3</nPulseWidthNS>
+				<nPulseWidthNS value="0">4</nPulseWidthNS>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthNS value="1">0</nPulseWidthNS>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="0">4</nPulseWidthNS>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineFilterFactor>
+	<DetermineFilterFactor2ndPass>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="200">3</nPulseWidthNS>
+				<nPulseWidthNS value="50">5</nPulseWidthNS>
+				<nPulseWidthNS value="0">6</nPulseWidthNS>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="1">
+				<nPulseWidthNS value="1">3</nPulseWidthNS>
+			</UseAltMethod>
+			<UseAltMethod value="0">
+				<nPulseWidthNS value="0">6</nPulseWidthNS>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineFilterFactor2ndPass>
+	<DetermineThresholdLimitMultiplier>
+		<Default>
+			<UseAltMethod value="0">1.0</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">0.75</UseAltMethod>
+			<UseAltMethod value="1">1.0</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineThresholdLimitMultiplier>
+	<DetermineThresholdLimitMultiplier2ndPass>
+		<Default>
+			<UseAltMethod value="0">1.0</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">0.75</UseAltMethod>
+			<UseAltMethod value="1">1.0</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineThresholdLimitMultiplier2ndPass>
+	<DetermineMaxPulseWidthInPointsMultiplier>
+		<Default>
+			<nPulseWidthInPoints value="10">5.0</nPulseWidthInPoints>
+			<nPulseWidthInPoints value="0">4.0</nPulseWidthInPoints>
+		</Default>
+	</DetermineMaxPulseWidthInPointsMultiplier>
+	<DetermineMaxFeatureGapInPointsMultiplier>
+		<Default>
+			<nPulseWidthInPoints value="0">2.0</nPulseWidthInPoints>
+		</Default>
+	</DetermineMaxFeatureGapInPointsMultiplier>
+	<DetermineMinPulseWidthInPointsMultiplier>
+		<Default>
+			<nPulseWidthInPoints value="10">0.5</nPulseWidthInPoints>
+			<nPulseWidthInPoints value="0">0.0</nPulseWidthInPoints>
+		</Default>
+	</DetermineMinPulseWidthInPointsMultiplier>
+	<DetermineEndOffsetDenom>
+		<Default>
+			<nPulseWidthNS value="20000">10</nPulseWidthNS>
+			<nPulseWidthNS value="1001">5</nPulseWidthNS>
+			<nPulseWidthNS value="0">2</nPulseWidthNS>
+		</Default>
+	</DetermineEndOffsetDenom>
+	<DetermineOffsetDenominator>
+		<Default>
+			<UseAltMethod value="0">3</UseAltMethod>
+		</Default>
+	</DetermineOffsetDenominator>
+	<DetermineZeroClampThreshold>
+		<Default>
+			<UseAltMethod value="1">500</UseAltMethod>
+			<UseAltMethod value="0">100</UseAltMethod>
+		</Default>
+	</DetermineZeroClampThreshold>
+	<DetermineProbeWidthInPointsMultiplier>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="0">3</nPulseWidthInPoints>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="0">1</nPulseWidthInPoints>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineProbeWidthInPointsMultiplier>
+	<DetermineProbeWidthInPointsMax>
+		<Default>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="0">20</nPulseWidthInPoints>
+			</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">
+				<nPulseWidthInPoints value="10">20</nPulseWidthInPoints>
+				<nPulseWidthInPoints value="0">5</nPulseWidthInPoints>
+			</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineProbeWidthInPointsMax>
+	<DetermineEventLevelMax>
+		<Default>
+			<UseAltMethod value="0">65</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">40</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineEventLevelMax>
+	<DetermineShortLSAThreshold>
+		<Default>
+			<UseAltMethod value="0">20</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">10</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineShortLSAThreshold>
+	<DetermineLSAThresholdMultipler>
+		<Default>
+			<WaveLength value="1650">0.3</WaveLength>
+			<WaveLength value="1625">0.2</WaveLength>
+			<WaveLength value="1550">0.2</WaveLength>
+			<WaveLength value="1490">0.25</WaveLength>
+			<WaveLength value="1310">0.33</WaveLength>
+			<WaveLength value="1300">0.5</WaveLength>
+			<WaveLength value="850">3.0</WaveLength>
+			<WaveLength value="0">3.0</WaveLength>
+		</Default>
+		<M200AutoEvents>
+			<WaveLength value="1300">1.0</WaveLength>
+			<WaveLength value="850">2.0</WaveLength>
+		</M200AutoEvents>
+	</DetermineLSAThresholdMultipler>
+	<DetermineLeftSteepMultiplier>
+		<Default>
+			<UseAltMethod value="0">3.0</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">15.0</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineLeftSteepMultiplier>
+	<DetermineRightSteepMultiplier>
+		<Default>
+			<UseAltMethod value="0">20.0</UseAltMethod>
+		</Default>
+		<M200AutoEvents>
+			<UseAltMethod value="0">40.0</UseAltMethod>
+		</M200AutoEvents>
+	</DetermineRightSteepMultiplier>
+</Modules>

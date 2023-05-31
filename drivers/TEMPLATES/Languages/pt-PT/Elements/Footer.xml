@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Footer RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Bottom" Height="3" Padding="5,5,5,5">
+			<Div Positioning="Content" Alignment="Center" Padding="5,5,5,5" BorderStyle="None" >
+				<PageNumber Alignment="Left" FontSize="10" Text="Page ###" />
+			</Div>
+		</Footer>
+    
+	</Body>
+</Template>

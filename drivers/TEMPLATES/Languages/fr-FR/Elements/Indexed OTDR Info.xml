@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Height="6" Padding="5,5,5,5" BackColor="LightGray">
+			<Div Positioning="Content" Alignment="Top" >
+				<Label Text="Résultats OTDR" ID="0" Alignment="Left" Padding="2,2,2,2" FontSize="16" />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="0,2,0,0" >
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="0" Direction="AZ" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="0" Direction="AZ" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="1" Direction="AZ" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="1" Direction="AZ" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

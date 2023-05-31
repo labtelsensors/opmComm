@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Description>Потери OLTS или таблица измерителя мощности для двух проверенных длин волн</Description>
+			<HelpText>Таблица потерь или мощностей: номер волокна, направление тестирования и длина волны;
+отображаются потери (дБ) или мощность (дБм или Вт) для тестируемых волокон.
+Выводятся результаты измерения потерь, выполненные в режимах OPM или Авто.
+Этот шаблон не генерирует отчёт Годен/Не годен.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OLTS Fiber Block.xml" />
+		<Template FileName="CommentBlock_ATD.xml" />
+
+		<Div Positioning="Content" Alignment="Top" Padding="20,5,20,5" >
+			<Template FileName="OPM Table Header.xml" />
+			<Template FileName="OPM Table.xml" />
+		</Div>
+    <Div RenderOption="OncePerCable" Positioning="Content" Alignment="Top" Width="50" Padding="20,0,20,0" >
+      <Div Positioning="Percentage" Width="80" Alignment="Left" >
+        <StandaloneImageForCable Index="0" Padding="10,0,20,0" Alignment="Left" />
+      </Div>
+    </Div>
+	</Body>
+</Template>

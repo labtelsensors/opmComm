@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Padding="20,0,20,5" Positioning="Content" Alignment="Top" BackColor="LightGray">
+			<OTDREvents Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" Padding="5,5,5,5" />
+		</Div>
+	</Body>
+</Template>

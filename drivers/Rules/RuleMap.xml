@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<RuleMap Type="0">
+	<Map Key="EN-50173-SM" MappedTo="SinglemodeEN-50173" />
+	<Map Key="EN-50173-MM" MappedTo="MultimodeEN-50173" />
+</RuleMap>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div Positioning="Percentage" Alignment="Top" Padding="10,10,10,10" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0 OR Settings.ProjectJobDescription.Length>0 OR Settings.ProjectTestPhase.Length>0">
+
+			<Div Positioning="Content" Alignment="Center" >
+
+				<Div Positioning="Percentage" Alignment="Top" MaxHeight="25" Padding="0,0,0,20" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0">
+					<Label Alignment="Left" Text="工作名称:" ID="0" Positioning="Percentage" Width="20" FontSize="20" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0"/>
+					<Data Alignment="Left" DataSource="Settings" Field="ProjectJobName" Wrap="True" FontSize="20" Conditional="Settings.ProjectJobName.Length>0"/>
+					<Data Alignment="Left" DataSource="JobClass" Field="Name" FontSize="20" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,20,0,0" >
+					<Div Positioning="Content" Alignment="Center" >
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectJobDescription.Length>0" >
+							<Label Alignment="Left" Text="工作描述:" ID="1" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectJobDescription" Wrap="True" FontSize="12" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.ProjectTestPhase.Length>0" >
+							<Label Alignment="Left" Text="测试阶段:" ID="2" Positioning="Percentage" Width="20" FontSize="12" />
+							<Data Alignment="Left" DataSource="Settings" Field="ProjectTestPhase" Wrap="True" FontSize="12"  />
+						</Div>
+
+					</Div>
+				</Div>
+
+			</Div>
+		</Div>
+
+
+	</Body>
+</Template>
+

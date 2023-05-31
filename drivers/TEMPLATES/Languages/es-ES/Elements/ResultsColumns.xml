@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+
+	<Body>
+
+		<Div Positioning="Content" Alignment="Top" Width="100" Conditional="Registry.UnstructuredFlag=False">
+
+			<Div Positioning="Percentage" Alignment="Left" Width="50">
+
+				<Div Alignment="Top" Positioning="Content" Conditional="User.RouteCountWithData.Count>0">
+					<Label Alignment="Left" Positioning="Percentage" Text="Rutas:" ID="0"  Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="RouteCountWithData" FontSize="12" />
+				</Div>
+				<Div Alignment="Top" Positioning="Content" Conditional="User.RouteCountWithData.Count=0">
+					<Label Alignment="Left" Positioning="Percentage" Text="Rutas:" ID="1"  Width="50" FontSize="12" />
+					<Label Alignment="Right" Text="1" FontSize="12" />
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content" Conditional="User.CableCountWithData.Count>0">
+					<Label Alignment="Left" Positioning="Percentage" Text="Cables:" ID="2"  Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="CableCountWithData" FontSize="12" />
+				</Div>
+				<Div Alignment="Top" Positioning="Content" Conditional="User.CableCountWithData.Count=0">
+					<Label Alignment="Left" Positioning="Percentage" Text="Cables:" ID="3"  Width="50" FontSize="12" />
+					<Label Alignment="Right" Text="1" FontSize="12" />
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Fibras:" ID="4"  Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="Fiber" Field="RowCount" FontSize="12" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Alignment="Left" Positioning="Percentage" Text="Resultados OLTS / OPM:" ID="5"  Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="OLTSOPMResults" FontSize="12" />
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Trazas:" ID="6"  Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="TraceCount" FontSize="12" />
+				</Div>
+				
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Right" Width="50">
+
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Cuenta de traza Monomodo:" ID="7" Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="SingleModeTraces" FontSize="12" />
+				</Div>
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Longitudes de onda monomodo:" ID="8" Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="SingleModeWaveLengths" FontSize="12" />
+				</Div>
+				
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Cuenta Traza Multimodo:" ID="9" Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="MultiModeTraces" FontSize="12" />
+				</Div>
+				<Div Alignment="Top" Positioning="Content">
+					<Label Alignment="Left" Positioning="Percentage" Text="Longitudes de onda Multimodo:" ID="10" Width="50" FontSize="12" />
+					<Data Alignment="Right" DataSource="User" Field="MultiModeWaveLengths" FontSize="12" />
+				</Div>
+				
+			</Div>
+
+		</Div>
+
+		<Div Positioning="Content" Alignment="Top" Width="100" Conditional="Registry.UnstructuredFlag=True">
+			<Label Alignment="Top" Text="Contiene los datos sin estructura" ID="12" FontSize="12" />
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Fibras:" ID="13"  Width="50" FontSize="12" />
+				<Data Alignment="Right" DataSource="Fiber" Field="RowCount" FontSize="12" />
+			</Div>
+		</Div>
+		<Div Alignment="Top" Positioning="Content" Padding="0,5,0,0">
+			<Label Alignment="Left" Positioning="Percentage" Text="* La cuenta representan sólamente los resultados válidos encontrado" ID="14" FontSize="12" />
+		</Div>
+
+	</Body>
+</Template>

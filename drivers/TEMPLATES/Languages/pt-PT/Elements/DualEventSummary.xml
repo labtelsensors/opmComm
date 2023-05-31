@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="5,5,5,5" BackColor="LightGray">
+			<Div Positioning="Percentage" Width="50" Padding="5,5,5,5">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,0">
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="# Eventos" ID="0" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Perda de Link" ID="2" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Link ORL" ID="4" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Link Comprimento" ID="5" Wrap="True" />
+					</Div>
+          <Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+            <Label Text="Link Atenção." ID="6" Wrap="True" />
+          </Div>
+          
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="5,0,5,5">
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="0" DataSource="OTDRInfo" Field="Events.Count" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="0" DataSource="OTDRInfo" Field="LinkLoss" Function="n/1000" Format="0.00" />
+						<Label Text="dB" ID="7" Conditional="OTDRInfo.LinkLoss.0.Length>0 AND OTDRInfo.LinkLoss.0.!=0"/>
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="0" DataSource="OTDRInfo" Field="LinkORL" Function="n/1000" Format="0.00" />
+						<Label Text="dB" ID="9" Conditional="OTDRInfo.LinkORL.0.Length>0 AND OTDRInfo.LinkORL.0.!=0" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="0" DataSource="OTDRInfo" Field="LinkLength" />
+						<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnitsAbbrev" />
+					</Div>
+          <Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+            <Data Index="0" DataSource="OTDRInfo" Field="dbkm" />
+            <Label Text="dB/km" ID="11" />
+          </Div>
+				</Div>
+			</Div>
+			<Div Positioning="Percentage" Width="50" Padding="5,5,5,5">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,0">
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="# Eventos" ID="10" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Perda de Link" ID="12" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Link ORL" ID="14" Wrap="True" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+						<Label Text="Link Comprimento" ID="15" Wrap="True" />
+					</Div>
+          <Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,0,5">
+            <Label Text="Link Atenção." ID="16" Wrap="True" />
+          </Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="5,0,5,5">
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="1" DataSource="OTDRInfo" Field="Events.Count" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="1" DataSource="OTDRInfo" Field="LinkLoss" Function="n/1000" Format="0.00" />
+						<Label Text="dB" ID="17" Conditional="OTDRInfo.LinkLoss.1.Length>0 AND OTDRInfo.LinkLoss.1.!=0" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="1" DataSource="OTDRInfo" Field="LinkORL" Function="n/1000" Format="0.00" />
+						<Label Text="dB" ID="19" Conditional="OTDRInfo.LinkORL.1.Length>0 AND OTDRInfo.LinkORL.1.!=0" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Data Index="1" DataSource="OTDRInfo" Field="LinkLength" />
+						<Data DataSource="OTDRInfo" Index="1" Field="DistanceUnitsAbbrev" />
+					</Div>
+          <Div Positioning="Percentage" Width="20" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+            <Data Index="1" DataSource="OTDRInfo" Field="dbkm" />
+            <Label Text="dB/km" ID="20" />
+          </Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

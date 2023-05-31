@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="5,5,5,5" >
+			<Div Positioning="Content" Padding="5,5,5,5">
+
+				<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Div Positioning="Percentage" Alignment="Left" >
+							<Label Text="光纜 ID:" ID="0" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="CableID" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="光纖號:" ID="1" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Field="FiberNumber" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="連接埠:" ID="2" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="FiberType" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="光纖類型:" ID="3" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="CableType" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="發射光纜:" ID="4" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDREnum" Index="0" Field="LaunchCableType" FontSize="12" />
+							<Div Positioning="Content" Conditional="OTDREnum.LaunchCableType=User">
+								<Label Text="(" FontSize="12"/>
+								<Data DataSource="OTDRInfo" Index="0" Field="UserOffset" FontSize="12" />
+								<Data DataSource="Settings" Field="DistanceUnits" FontSize="12" />
+								<Label Text=")" FontSize="12"/>
+							</Div>
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="尾端纜線:" ID="5" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDREnum" Index="0" Field="ReceiveCableType" FontSize="12" />
+							<Div Positioning="Content" Conditional="OTDREnum.ReceiveCableType=User">
+								<Label Text="(" FontSize="12"/>
+								<Data DataSource="OTDRInfo" Index="0" Field="ReceiveCableLength" FontSize="12" />
+								<Data DataSource="Settings" Field="DistanceUnits" FontSize="12" />
+								<Label Text=")" FontSize="12"/>
+							</Div>
+						</Div>
+					</Div>
+
+				</Div>
+
+				<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Div Positioning="Percentage" Alignment="Left" >
+							<Label Text="終點 1:" ID="6" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndOneSite" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="48">
+							<Label Text="群組折射率:" ID="7" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="IOR" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="反散射係數:" ID="8" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="BackscatterCoef" FontSize="12" />
+							<Label Text=" dB" ID="9" Alignment="Left" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="48">
+							<Label Text="自動設置:" ID="10" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="TestMode" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="48">
+							<Label Text="終點閥值:" ID="11" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndThreshold" FontSize="12" />
+							<Label Text=" dB" ID="12" Alignment="Left" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="48">
+							<Label Text="損耗閥值:" ID="13" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="LossThreshold" FontSize="12" />
+							<Label Text=" dB" ID="14" Alignment="Left" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="48">
+							<Label Text="反射率閥值:" ID="15" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="ReflThreshold" FontSize="12" />
+							<Label Text=" dB" ID="16" Alignment="Left" FontSize="12" />
+						</Div>
+					</Div>
+
+				</Div>
+
+				<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+					<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+						<Div Positioning="Percentage" Alignment="Left" >
+							<Label Text="終點 2:" ID="17" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndTwoSite" FontSize="12" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="機型:" ID="18" FontSize="12"  Conditional="OTDRInfo.MainFrameID.Length!=0"/>
+						</Div>
+						<Div Positioning="Fill" Alignment="Left">
+							<Data DataSource="OTDRInfo" Alignment="Left" Field="MainFrameID" FontSize="12" Conditional="OTDRInfo.MainFrameID.Length!=0" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42" >
+							<Label Text="序號:" ID="19" Alignment="Left" FontSize="12" Conditional="OTDRInfo.MainFrameSN.Length!=0"/>
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="MainFrameSN" FontSize="12"  Conditional="OTDRInfo.MainFrameSN.Length!=0"/>
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42" >
+							<Label Text="軟體版本:" ID="20" Alignment="Left" FontSize="12" Conditional="OTDRInfo.SoftwareRev.Length!=0" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="SoftwareRev" FontSize="12" Conditional="OTDRInfo.SoftwareRev.Length!=0" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42" >
+							<Label Text="校準日期:" ID="21" Alignment="Left" FontSize="12" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="CalDate" FontSize="12" Conditional="OTDRInfo.CalDate.0.IsValidDate=True"/>
+							<Label Text="ñ /阿" ID="0" FontSize="12" Conditional="OTDRInfo.CalDate.0.IsValidDate!=True"/>
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42" >
+							<Label Text="操作員 1:" ID="22" Alignment="Left" FontSize="12" Conditional="OTDRInfo.Operator.Length!=0" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="Operator" FontSize="12" Conditional="OTDRInfo.Operator.Length!=0" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42" >
+							<Label Text="操作員 2:" ID="23" Alignment="Left" FontSize="12" Conditional="OTDRInfo.Operator2.Length!=0" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="Operator2" FontSize="12" Conditional="OTDRInfo.Operator2.Length!=0" />
+						</Div>
+					</Div>
+				</Div>
+
+			</Div>
+		</Div>
+		<Div Positioning="Fill" Conditional="OTDRInfo.UsePassEventThreshold.Length>0">
+			<Div Conditional="OTDRInfo.UsePassEventThreshold=True" Positioning="Content" Alignment="Right">
+				<Div Conditional="OTDRInfo.OverallPassFail!=False AND OPMInfo.FiberPassFail!=False" Positioning="Content">
+					<ImageElement FileName="Check" />
+				</Div>
+				<Div Conditional="OTDRInfo.OverallPassFail=False OR OPMInfo.FiberPassFail=False" Positioning="Content">
+					<ImageElement FileName="X" />
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

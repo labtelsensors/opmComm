@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Content" Conditional="OPMInfo.ContainsOLTSData=False AND OPMInfo.ContainsORLData=True">
+			<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+				<Label Alignment="HorizCenter" Text="Результаты ЛОР" ID="0" FontSize="36" />
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<ORLTable Positioning="Percentage" Alignment="Left" Width="100" FontSize="20" Format="0.00" />
+			</Div>
+		</Div>
+		<Div Alignment="Top" Positioning="Content" Conditional="OPMInfo.ContainsOLTSData=False AND OPMInfo.ContainsORLData=False">
+			<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+				<Label Alignment="HorizCenter" Text="OPM Результаты" ID="1" FontSize="36" />
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<OPM_Table Positioning="Percentage" Alignment="Left" Width="100" FontSize="20" Format="0.00" />
+			</Div>
+		</Div>
+		<Div Alignment="Top" Positioning="Content" Conditional="OPMInfo.ContainsOLTSData=True">
+			<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+				<Label Alignment="HorizCenter" Text="Результаты OLTS" ID="2" FontSize="36" />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5"  Conditional="OPMInfo.CablingRules.Count>0">
+				<Label Text="Кабели Стандарт:" ID="3" FontSize="15" />
+				<Data DataSource="OPMInfo" Field="CablingRuleName" Index="0" FontSize="15" />
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+				<Label Text="Количество подключений:" ID="4" FontSize="15" />
+				<Data DataSource="OPMInfo" Field="OPMInfo.FiberItem.NumberOfConnections" Index="0" FontSize="15" />
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<OLTSTable Positioning="Percentage" Alignment="Left" Width="100" FontSize="20" Format="0.00" />
+			</Div>
+		</Div>
+	</Body>
+</Template>

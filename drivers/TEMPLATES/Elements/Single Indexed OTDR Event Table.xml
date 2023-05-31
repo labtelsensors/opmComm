@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Height="5" Padding="20,0,20,0" BackColor="LightGray">
+			<TraceEventTable ShowPassFail="False" Positioning="Percentage" Index="0" Alignment="Left" Width="100" Padding="5,5,5,5"  />
+		</Div>
+		<Template FileName="SingleEventSummary.xml" />
+	</Body>
+</Template>

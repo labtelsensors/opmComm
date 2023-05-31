@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Height="10" Padding="20,5,20,20">
+			<Div Positioning="Content" Alignment="Left">
+				<Div Positioning="Content" Alignment="Top">
+					<Label Text="Ereig-Zuord" ID="0" Alignment="Top" Padding="0,2,0,2" FontSize="14" />
+				</Div>
+				<Div Positioning="Content" Alignment="Top">
+					<Div Positioning="Percentage" Alignment="Left" Width="30" Padding="5,0,0,5">
+						<Div Positioning="Content" Alignment="Left" >
+							<Label Text="Ende1" ID="1" Alignment="Top" FontSize="12" />
+							<Data Alignment="Top" DataSource="OTDRInfo" Field="EndOneSite" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Percentage" Alignment="Right" Width="30"  Padding="0,0,5,5">
+						<Div Positioning="Content" Alignment="Right" >
+							<Label Text="Ende2" ID="2" Alignment="Top" FontSize="12" />
+							<Data DataSource="OTDRInfo" Field="EndTwoSite" Alignment="Top" FontSize="12" />
+						</Div>
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Div Positioning="Percentage" Alignment="Top" Height="20">
+							<Div Positioning="Content" Alignment="Center">
+								<Label Text="Verkn.-Länge" ID="3" Alignment="Left" FontSize="12" BorderStyle="None" />
+								<Data DataSource="OTDRInfo" Field="LinkLength" Alignment="Left" FontSize="12" BorderStyle="None" />
+								<Label Text=" " Alignment="Left" FontSize="12" BorderStyle="None" />
+								<Data DataSource="OTDRInfo" Field="DistanceUnits" Alignment="Left" FontSize="12" BorderStyle="None" />
+							</Div>
+						</Div>
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Top" Height="60">
+					<EventLine X="5" Y="30" X2="95" Y2="30" BackColor="Black" ForeColor="Blue" FontSize="10" />
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

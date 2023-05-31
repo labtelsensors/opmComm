@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Agrandir le graphique OTDR avec une longueur d'onde principale longueur d'onde et d'autres pour la fibre d'essai présenté à la comparaison. Le tableau de l'événement de la Main d'onde est affichée en dessous du graphique. Ce rapport génère une page pour chaque longueur d'onde pour chaque fibre.</HelpText>
+		</PageSettings>
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|AZ" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Multiple Trace Summary.xml" />
+			<Template FileName="Multiple OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|ZA" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Multiple Trace Summary.xml" />
+			<Template FileName="Multiple OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="MultiMode|AZ" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Multiple Trace Summary.xml" />
+			<Template FileName="Multiple OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="MultiMode|ZA" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single Indexed OTDR Graph.xml" />
+			<Template FileName="Multiple Trace Summary.xml" />
+			<Template FileName="Multiple OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+	</Body>
+</Template>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Padding ="20,0,20,5" Positioning="Content" Alignment="Top" BackColor="LightGray">
+			<OTDRTable Positioning="Percentage" Alignment="Left" Width="100" Format="0.00" Padding="5,5,5,5" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=false ">
+			<Label Text="* - Non comprendono cavo lancio o cavi ricezione" ID="0" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=false AND OTDRInfo.ReceiveCable=true ">
+			<Label Text="* - Non comprendono cavo lancio" ID="1" />
+		</Div>
+		<Div Padding ="30,0,0,5" Positioning="Content" Alignment="Top" Conditional="OTDRInfo.LaunchCable=true AND OTDRInfo.ReceiveCable=false " BackColor="Orange">
+			<Label Text="* - Non comprendono cavo ricezione" ID="2" />
+		</Div>
+	</Body>
+</Template>

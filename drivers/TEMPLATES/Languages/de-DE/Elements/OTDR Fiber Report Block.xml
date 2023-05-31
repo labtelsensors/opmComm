@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Padding="20,0,20,0" >
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Label Text="Kabel-ID:" ID="0" Alignment="Left" FontSize="10" />
+					<Data DataSource="OTDRInfo" Index="0" Field="CableID" FontSize="10" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="44">
+						<Label Text="Fasernr.:" ID="1" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Field="FiberNumber" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="44">
+						<Label Text="Port:" ID="2" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="FiberType" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="44">
+						<Label Text="Fasertyp:" ID="3" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="CableType" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="44">
+						<Label Text="Vorl.-Faser:" ID="4" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDREnum" Index="0" Field="LaunchCableType" FontSize="10" />
+						<Div Positioning="Content" Conditional="OTDREnum.LaunchCableType=User">
+							<Label Text="(" FontSize="10"/>
+							<Data DataSource="OTDRInfo" Index="0" Field="UserOffset" FontSize="10" />
+							<Data DataSource="Settings" Field="DistanceUnits" FontSize="10" />
+							<Label Text=")" FontSize="10"/>
+						</Div>
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="44">
+						<Label Text="Endkabel:" ID="5" Alignment="Left" FontSize="10"/>
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Data DataSource="OTDREnum" Index="0" Field="ReceiveCableType" FontSize="10" />
+						<Div Positioning="Content" Conditional="OTDREnum.ReceiveCableType=User">
+							<Label Text="(" FontSize="10"/>
+							<Data DataSource="OTDRInfo" Index="0" Field="ReceiveCableLength" FontSize="10" />
+							<Data DataSource="Settings" Field="DistanceUnits" FontSize="10" />
+							<Label Text=")" FontSize="10"/>
+						</Div>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="44">
+						<Label Text="Cursor A:" ID="6" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OTDRInfo" Field="Cursor.A.Location.InCurrentUnits" FontSize="10" Format="0.00" />
+						<Label Text=" " FontSize="10" />
+						<Data DataSource="OTDRInfo" Field="Cursor.A.Location.DistanceUnits" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="44">
+						<Label Text="Cursor B:" ID="7" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OTDRInfo" Field="Cursor.B.Location.InCurrentUnits" FontSize="10" Format="0.00" />
+						<Label Text=" " FontSize="10" />
+						<Data DataSource="OTDRInfo" Field="Cursor.B.Location.DistanceUnits" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="44">
+						<Label Text="B-A-Entf.:" ID="8" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill">
+						<DataCalc FontSize="10" Format="0.00">
+							<Data RenderOption="SkipElement" Name="A" DataSource="OTDRInfo" Field="Cursor.A.Location.InCurrentUnits" />
+							<Data RenderOption="SkipElement" Name="B" DataSource="OTDRInfo" Field="Cursor.B.Location.InCurrentUnits" />
+							<DataCalculation RenderOption="SkipElement" Function="'B'-'A'" />
+						</DataCalc>
+						<Label Text=" " FontSize="10" />
+						<Data DataSource="OTDRInfo" Field="Cursor.B.Location.DistanceUnits" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="44">
+						<Label Text="B-A-Verl.:" ID="9" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<DataCalc FontSize="10" Format="0.00">
+							<Data RenderOption="SkipElement" Name="A" DataSource="OTDRInfo" Field="Cursor.A.Loss" />
+							<Data RenderOption="SkipElement" Name="B" DataSource="OTDRInfo" Field="Cursor.B.Loss" />
+							<DataCalculation RenderOption="SkipElement" Function="('B'-'A')/1000" />
+						</DataCalc>
+						<Label Text="dB" ID="10" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="44">
+						<Label Text="B-A-Verl./km:" ID="11" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data FontSize="10" DataSource="OTDRInfo" Format="0.00" Field="LSAAttenuation" />
+						<Label Text="dB/km" ID="12" FontSize="10" />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Label Text="Ende1:" ID="13" Alignment="Left" FontSize="10" />
+					<Data DataSource="OTDRInfo" Index="0" Field="EndOneSite" FontSize="10" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="OTDR gesp. unter:" ID="14" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Field="OTDRLocation" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="OTDR-Setup:" ID="15" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="TestMode" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="GIR:" ID="16" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="IOR" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="Rückstreu-Koeff.:" ID="17" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="BackscatterCoef" FontSize="10" />
+						<Label Text="dB" ID="18" Alignment="Left" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="Endschwellw.:" ID="19" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="EndThreshold" FontSize="10" />
+						<Label Text="dB" ID="20" Alignment="Left" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="Verl.-Schwellw.:" ID="21" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="LossThreshold" FontSize="10" />
+						<Label Text="dB" ID="22" Alignment="Left" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="48">
+						<Label Text="Refl.-Schwellwert:" ID="23" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="ReflThreshold" FontSize="10" />
+						<Label Text="dB" ID="24" Alignment="Left" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="48">
+						<Label Text="Bereich:" ID="25" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OTDRInfo" Field="DisplayRange" FontSize="10" />
+						<Data DataSource="OTDRInfo" Field="DisplayRange.DistanceUnits" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="48">
+						<Label Text="Impulsbreite:" ID="26" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OTDRInfo" Field="PulseWidth" FontSize="10" />
+						<Label Text="ns" ID="27" Alignment="Left" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="48">
+						<Label Text="Durchschn.:" ID="28" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" >
+						<Data DataSource="OTDRInfo" Field="NumberOfAverages" FontSize="10" />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Left" Width="33">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10" >
+					<Label Text="Ende2:" ID="29" Alignment="Left" FontSize="10" />
+					<Data DataSource="OTDRInfo" Index="0" Field="EndTwoSite" FontSize="10" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="Modell:" ID="30" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left">
+						<Data DataSource="OTDRInfo" Alignment="Left" Field="MainFrameID" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="Ser. #:" ID="31" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="MainFrameSN" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="Softw.-Vers.:" ID="32" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="SoftwareRev" FontSize="10" />
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="Kal.-Dat.:" ID="33" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="CalDate" FontSize="10" Conditional="OTDRInfo.CalDate.IsValidDate=True" Format="Short"/>
+					</Div>
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="Bediener1:" ID="34" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="Operator" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42" >
+						<Label Text="Bediener2:" ID="35" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="Operator2" FontSize="10" />
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Alignment="Left" Width="42">
+						<Label Text="Testdatum:" ID="36" Alignment="Left" FontSize="10" />
+					</Div>
+					<Div Positioning="Fill" Alignment="Left" >
+						<Data DataSource="OTDRInfo" Index="0" Field="TimeStamp" FontSize="10" />
+					</Div>
+				</Div>
+        <Div Positioning="Content" Alignment="Top" >
+          <Div Positioning="Percentage" Alignment="Left" Width="42">
+            <Label Text="Steckertyp Steckerinspektion: " ID="37" Alignment="Left" FontSize="10" Conditional="HasImage" />
+          </Div>
+          <Div Positioning="Fill" Alignment="Left" >
+            <Data DataSource="ImageInfo" Index="0" Field="FiberType" FontSize="10" Conditional="HasImage" />
+          </Div>
+        </Div>
+			</Div>
+		</Div>
+		<Template FileName="CommentBlock.xml" />
+	</Body>
+</Template>

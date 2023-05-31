@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Полное графа OTDR размером с основной волны и другие длины волн для испытания показали волокно для сравнения. Событие таблице Главного волны отображается ниже графике. Этот доклад генерирует страницу для каждой длины волны для каждого волокна.</HelpText>
+		</PageSettings>
+		
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="Multiple Trace Summary.xml" />
+		<Template FileName="Multiple OTDR Events.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

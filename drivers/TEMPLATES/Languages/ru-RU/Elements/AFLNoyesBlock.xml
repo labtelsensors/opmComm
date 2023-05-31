@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Width="100">
+			<Div Positioning="Content" Alignment="Left">
+				<ImageElement FileName="FodLogo.png" Alignimage="Center" Padding="5,0,5,0" Sizing="FixedAspect" />
+			</Div>
+      <Div Positioning="Content" Alignment="Center" Padding="15,0,20,0" Conditional="Settings.TRMInfo.Length>0">
+        <Data DataSource="Settings" Field="TRMInfo" Alignment="Center" FontSize="8" />
+      </Div>
+		</Div>
+
+	</Body>
+</Template>

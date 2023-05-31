@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>0,0,0,0</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Le informazioni sulla sezione si limitano a nome della società e indirizzo. \r\nLe informazioni sul job si limitano a nome job, descrizione e fase di prova.\r\nIn caso di informazioni non richieste, compresi i loghi, lascia lo spazio bianco e/o deseleziona le rispettive voci.
+
+In caso di informazioni non richieste, compresi i loghi, lascia in bianco e/o deseleziona le rispettive voci.</HelpText>
+			<Description>Copertina rapporto con installatore poi utente finale, con dati essenziali</Description>
+		</PageSettings>
+
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="0" Padding="40,40,40,40" >
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.PreparerSectionTitle.Length>0">
+					<Data Alignment="Left" DataSource="Settings" Field="PreparerSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,0,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+						<Template FileName="Preparer-TopLogo.xml" Alignment="VertCenter"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" >
+					<Data Alignment="Left" DataSource="Settings" Field="CustomerSectionTitle" FontSize="15" Conditional="Settings.CustomerSectionTitle.Length>0" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+					<Div Positioning="Content" Alignment="Center" Padding="10,10,10,10" >
+						<Template FileName="Customer.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0 OR Settings.ProjectJobDescription.Length>0 OR Settings.ProjectTestPhase.Length>0">
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="Center" Padding="10,10,10,10" >
+						<Template FileName="Project.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Bottom" Height="6" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+				<Div Positioning="Percentage" Alignment="HorizCenter" Width="100" Padding="10,10,10,10" >
+					<Template FileName="AFLNoyesBlock.xml" Padding="5,5,5,5" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeAcceptanceSignature=True" >
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10">
+						<Template FileName="Acceptance Signature Block.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.ConsultantSectionTitle.Length>0">
+					<Data Alignment="Left" DataSource="Settings" Field="ConsultantSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Bottom" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,0,10" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True" >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+						<Template FileName="Consultant-TopLogo.xml" Alignment="VertCenter"  />
+					</Div>
+				</Div>
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

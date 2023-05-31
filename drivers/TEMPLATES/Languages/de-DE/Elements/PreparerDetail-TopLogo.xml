@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10" Width="100" Conditional="Settings.IncludePreparerLogoInfo=True OR Settings.IncludePreparerInfo=True" >
+
+			<Div Positioning="Content" Alignment="Top" Height="40" Conditional="Settings.IncludePreparerLogoInfo=True" >
+				<ImageElement FileName="PreparerLogo" Alignment="Center" Sizing="FixedAspect" />
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Padding="0,10,0,0" Conditional="Settings.IncludePreparerInfo=True" >
+				<Div Positioning="Content" Alignment="HorizCenter">
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Data DataSource="Settings" Field="PreparerCompanyName" Alignment="HorizCenter" FontSize="20" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Data DataSource="Settings" Field="PreparerAddress" Alignment="HorizCenter" FontSize="15" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Div Positioning="Content" Alignment="HorizCenter">
+							<Data Alignment="Left" DataSource="Settings" Field="PreparerCity" FontSize="15" />
+							<Label Alignment="Left" Text=", " FontSize="15" Conditional="Settings.PreparerCity=True AND Settings.PreparerState=True"/>
+							<Data Alignment="Left" DataSource="Settings" Field="PreparerState" FontSize="15" />
+							<Label Alignment="Left" Text=" " FontSize="15" />
+							<Data Alignment="Left" DataSource="Settings" Field="PreparerPostalCode" FontSize="15" />
+							<Label Alignment="Left" Text=" " FontSize="15" />
+							<Data Alignment="Left" DataSource="Settings" Field="PreparerCountry" FontSize="15" />
+						</Div>
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" Width="100">
+						<Div Positioning="Content" Alignment="Center">
+
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.PreparerContact.Length>0">
+								<Label Positioning="Percentage" Text="Kontakt:" ID="0" Width="20" FontSize="12" />
+								<Data DataSource="Settings" Field="PreparerContact" FontSize="12" />
+							</Div>
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.PreparerPhone.Length>0">
+								<Label Positioning="Percentage" Text="Tel.:" ID="1" FontSize="12" Width="20" />
+								<Data DataSource="Settings" Field="PreparerPhone" FontSize="12" />
+							</Div>
+							<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.PreparerEmail.Length>0">
+								<Label Positioning="Percentage" Text="E-Mail:" ID="2"  Width="20" FontSize="12" />
+								<Data DataSource="Settings" Field="PreparerEmail" FontSize="12" />
+							</Div>
+
+						</Div>
+
+					</Div>
+
+				</Div>
+
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

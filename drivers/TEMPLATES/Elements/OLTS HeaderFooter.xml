@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Header RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Top" Height="8" Padding="5,5,5,5" >
+			<ImageElement FileName="CustomerLogo" Positioning="Percentage" Alignment="Left" Sizing="FixedAspect" Width="35" Padding="5,5,5,5" />
+			<Div Positioning="Percentage" Alignment="Left" Width="5" >
+
+			</Div>
+			<Div Positioning="Fill" Alignment="Left" Render="Once" >
+				<Div Positioning="Content" Alignment="Top" Padding="0,5,0,0" Conditional="Settings.ProjectJobName.Length>0" >
+					<Label Text="Job Name: " ID="0" Alignment="Left" FontSize="14" />
+					<Data DataSource="Settings" Field="ProjectJobName" FontSize="14" Alignment="Left" />
+				</Div>
+				<Div Positioning="Content" Alignment="Top" Padding="0,5,0,0">
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Div Positioning="Content" Alignment="Top" >
+							<Label Text="Main Model #: " ID="1" Positioning="Percentage" Width="30" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="MainModel" FontSize="10" Text="       " />
+						</Div>
+						<Div Positioning="Content" Alignment="Top" >
+							<Label Text="Main Serial #: " ID="2" Positioning="Percentage" Width="30" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="MainSerialNumber" FontSize="10" Text="       " />
+						</Div>
+						<Div Positioning="Content" Alignment="Top" Conditional="OPMInfo.MainCalDate.IsValidDate=True">
+							<Label Text="Main CalDate: " ID="3" Positioning="Percentage" Width="30" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="MainCalDate" FontSize="10" Text="       " Format="Short"/>
+						</Div>
+					</Div>
+					<Div Positioning="Percentage" Alignment="Left" Width="50">
+						<Div Positioning="Content" Alignment="Top" >
+							<Label Text="Remote Model #: " ID="4" Positioning="Percentage" Width="35" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="RemoteModel" FontSize="10" Text="       " />
+						</Div>
+						<Div Positioning="Content" Alignment="Top" >
+							<Label Text="Remote Serial #: " ID="5" Positioning="Percentage" Width="35" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="RemoteSerialNumber" FontSize="10" Text="       " />
+						</Div>
+						<Div Positioning="Content" Alignment="Top" Conditional="OPMInfo.RemoteCalDate.IsValidDate=True">
+							<Label Text="Remote CalDate: " ID="6" Positioning="Percentage" Width="35" FontSize="10" />
+							<Data DataSource="OPMInfo" Field="RemoteCalDate" FontSize="10" Text="       " Format="Short"/>
+						</Div>
+					</Div>
+				</Div>
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Percentage" Width="30" Alignment="Left" >
+						<Label Text="Port: " ID="7" Positioning="Percentage" Width="28" FontSize="10" />
+						<Data DataSource="OPMInfo" Index="0" Field="FiberType" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Percentage" Width="33" Alignment="Left" >
+						<Label Text="Fiber Type: " ID="8" Positioning="Percentage" Width="35" FontSize="10" />
+						<Data DataSource="OPMInfo" Index="0" Field="CableType" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Percentage" Width="33" Alignment="Left">
+						<Label Text="Software Version: " ID="9" Positioning="Percentage" Width="55" FontSize="10" />
+						<Data DataSource="OPMInfo" Index="0" Field="MainSoftwareRev" FontSize="10" Text="       " />
+					</Div>
+				</Div>
+			</Div>
+      <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="35" Padding="5,5,5,5" />
+		</Header>
+		<Footer RenderOption="EveryPage" Order="10" Positioning="Percentage" Alignment="Bottom" Height="3" Padding="5,5,5,5" BackColor="240,240,255">
+			<Div Positioning="Content" Alignment="Center" Padding="5,5,5,5" BorderStyle="None" >
+				<PageNumber Alignment="Left" FontSize="10" Text="Page ###" />
+			</Div>
+		</Footer>
+	</Body>
+</Template>

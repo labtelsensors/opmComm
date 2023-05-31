@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>0,0,0,0</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Содержит сначала информацию о подрядчике, затем о конечном пользователе и подробную информацию о задаче.
+Консультант, если был введён, - внизу страницы.
+Содержит подробную контактную информацию.
+Компаниям с длинными логотипами больше всего подходит этот формат.
+Если появляется нежелательная информация , включая логотипы, снимите пометки возле соответствующих элементов.
+Будет включена любая введенная информация.
+Если появляется нежелательная информация , включая логотипы, оставить пустым и/или снимите пометки возле соответствующих элементов.</HelpText>
+			<Description>Обложка отчёта с подрядчиком, конечным пользователем и подробной информацией</Description>
+		</PageSettings>
+		
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="0" Padding="40,40,40,40" >
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.PreparerSectionTitle.Length>0" >
+					<Data Alignment="Left" DataSource="Settings" Field="PreparerSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Percentage" Alignment="Top" Width="100" Height="14" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,0,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True" >
+					<Div Positioning="Percentage" Alignment="HorizCenter" Width="80" Padding="10,10,10,10" >
+						<Template FileName="PreparerDetail.xml" Alignment="Center"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.CustomerSectionTitle.Length>0" >
+					<Data Alignment="Left" DataSource="Settings" Field="CustomerSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+					<Div Positioning="Content" Alignment="Center" Padding="10,10,10,10" >
+						<Template FileName="CustomerDetail.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0 OR Settings.ProjectJobDescription.Length>0 OR Settings.ProjectTestPhase.Length>0 OR Settings.ProjectAwardDateChecked=True OR Settings.ProjectJobCompletionDateChecked=True OR Settings.ProjectDatePreparedChecked=True OR Settings.ProjectManager.Length>0 OR Settings.ProjectContractPONumber.Length>0 OR Settings.ProjectPreparedBy.Length>0">
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="Center" Padding="10,10,10,10" >
+						<Template FileName="ProjectDetail.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Percentage" Alignment="Bottom" Height="6" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+				<Div Positioning="Percentage" Alignment="HorizCenter" Width="100" Padding="10,10,10,10" >
+					<Template FileName="AFLNoyesBlock.xml" Padding="5,5,5,5" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeAcceptanceSignature=True" >
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+					<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10">
+						<Template FileName="Acceptance Signature Block.xml"  />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.ConsultantSectionTitle.Length>0 AND Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True">
+					<Data Alignment="Left" DataSource="Settings" Field="ConsultantSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Percentage" Alignment="Bottom" Width="100" Height="14" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,0,10" Conditional="Settings.IncludeConsultantInfo=True OR Settings.IncludeConsultantLogoInfo=True" >
+					<Div Positioning="Percentage" Alignment="HorizCenter" Width="80" Padding="10,10,10,10" >
+						<Template FileName="ConsultantDetail.xml" Alignment="Center"  />
+					</Div>
+				</Div>
+			</Div>
+
+		</Div>
+	</Body>
+</Template>

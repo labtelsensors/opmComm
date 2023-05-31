@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Floating" X="92" Y="2.8" Width="4.5" Height="4.5" Conditional="OPMInfo.ContainsOLTSData=True">
+			<Div Conditional="OPMInfo.OverallRules.Passed=True" Positioning="Content" >
+				<ImageElement FileName="Check" />
+			</Div>
+			<Div Conditional="OPMInfo.OverallRules.Passed!=True" Positioning="Content" >
+				<ImageElement FileName="X" />
+			</Div>
+		</Div>
+	</Body>
+</Template>

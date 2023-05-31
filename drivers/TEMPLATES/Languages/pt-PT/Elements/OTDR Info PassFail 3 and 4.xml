@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Height="6" Padding="5,5,5,5" BackColor="LightGray">
+			<Div Positioning="Content" Alignment="Top">
+				<Label Positioning="Percentage" Width="20" Text="Resultados OTDR" ID="0" Alignment="Left" Padding="2,2,2,2" FontSize="16" />
+				<Div Conditional="OTDRInfo.UsePassEventThreshold.2.=True" Alignment="Left" Positioning="Fill">
+					<Div Conditional="OTDRInfo.IsTracePass.2.=True" Positioning="Content">
+						<Label Text="PASS" ID="1" Alignment="Top" Padding="2,2,2,2" FontSize="16" ForeColor="Green" />
+					</Div>
+					<Div Conditional="OTDRInfo.IsTracePass.2.!=True" Positioning="Content">
+						<Label Text="FAIL" ID="2" Alignment="Top" Padding="2,2,2,2" FontSize="16" ForeColor="Red" />
+					</Div>
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="0,2,0,0" Conditional="OTDRInfo.ContainsSingleMode=True">
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="2" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="2" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="3" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="3" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+			</Div>
+			<Div Positioning="Content" Alignment="Top" Padding="0,2,0,0" Conditional="OTDRInfo.ContainsMultiMode=True">
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="2" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="2" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="3" Field="Filename" Padding="2,2,2,2" FontSize="10" Text="       " />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="OTDRInfo" Index="3" Field="Wavelength" Padding="2,2,2,2" FontSize="12" Text="       " />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

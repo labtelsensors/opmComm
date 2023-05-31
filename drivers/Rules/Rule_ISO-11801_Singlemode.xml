@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="ISO-11801"
+		  TestPort="Singlemode"
+		  Units="dB"
+		  LossThreshType="FiberLoss"
+		  Description="ISO 11801 (International Standard) inside plant, singlemode fiber."
+		  UseType="In"
+		  CatType="ISO"
+		  StdType="Cabling" Version="1.0.1">
+		<LossThreshold WL="1310"
+					   Min="0"
+					   Max="1.0"></LossThreshold>
+		<LossThreshold WL="1550"
+					   Min="0"
+					   Max="1.0"></LossThreshold>
+		<MaxLength Units="Meters">2000</MaxLength>
+		<LossPerSplice>0.3</LossPerSplice>
+		<LossPerConnector>0.75</LossPerConnector>
+	</Rule>
+</Rules>

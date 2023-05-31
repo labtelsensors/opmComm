@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Content" Alignment="Top" Height="5" Padding="20,0,20,0" BackColor="LightGray">
+			<Div Positioning="Percentage" Alignment="Left" Width="100" Padding="5,5,5,5">
+				<Div Positioning="Content" Alignment="Top" Padding="5,5,5,5">
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="# Ereig." ID="0" />
+						<Data Alignment="Top" Index="0" DataSource="OTDRInfo" Field="Events.Count" />
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="Verkn.-verl." ID="3" />
+						<Div Positioning="Content" Alignment="Top" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkLoss" Function="n/1000" Format="0.00"/>
+							<Label Text="dB" ID="4" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="Verkn. ORL" ID="7" />
+						<Div Positioning="Content" Alignment="Top" >
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkORL" Function="n/1000" Format="0.00"/>
+							<Label Text="dB" ID="8" />
+						</Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+					<Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+						<Label Alignment="Top" Text="Verkn.-Länge" ID="9" />
+						<Div Positioning="Content" Alignment="Top">
+							<Data Index="0" DataSource="OTDRInfo" Field="LinkLength" />
+							<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnitsAbbrev" />
+						</Div>
+            <TLine X="0" Y="50" X2="100" Y2="50" />
+          </Div>
+          <Div Positioning="Percentage" Width="20" Alignment="Left" BorderStyle="OuterRectangle" Padding="5,5,5,5">
+            <Label Alignment="Top" Text="Verkn. Dämpf." ID="10" />
+            <Div Positioning="Content" Alignment="Top">
+              <Data Index="0" DataSource="OTDRInfo" Field="dbkm" />
+              <Label Text="dB/km" ID="11" Conditional="OTDRInfo.dbkm.0.Length.!=2" />
+            </Div>
+						<TLine X="0" Y="50" X2="100" Y2="50" />
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

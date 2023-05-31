@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.0.604 (http://www.liquid-technologies.com) -->
+<!--Contains information for OTDR instruments -->
+<!--Each Setup element contains laser test parameters based on wavelength and fibertype.
+	Attributes - ver (Schema version), MaxRangeDB (for graph display)-->
+<Setup ver="0.0.0.10" MaxRangeDB="55000">
+	<!--Optional Reserved hardware (Future) block arrays of ushort values, to be merged in
+		command block's Future-->
+	<Reserved val="5,2,4,6">
+		<!--As 4 UInt16/WORD/ushort values-->
+		<!-- NOT IMPLEMENTED - As an int or 2 ushort values
+		<Item val="5" num="2"/>
+		<Item val="1,5" />
+		-->
+	</Reserved>
+	<!--Test options per fiber type, AutoRangeWavelength (wavelength used for range finding),
+		AutoEvents algorithm to utilize, and the number of data points being processed
+		List of Displays combinations and corresponding test orders-->
+	<!--Each TestOptions TestOption val=nominal wavelength, and an array (Order) for wavelength test order-->
+	<TestOptions val="Singlemode" AutoRangeWavelength="1550" NumDataPoints="16000" AutoEvents="M710AutoEvents">
+		<!--TestOption val=nominal wavelength, and an array (Order) for wavelength test order-->
+		<TestOption val="1310">
+			<Order val="1310"/>
+		</TestOption>
+		<TestOption val="1550">
+			<Order val="1550"/>
+		</TestOption>
+		<TestOption val="1625">
+			<Order val="1625"/>
+		</TestOption>
+		<TestOption val="1310/1550">
+			<Order val="1310"/>
+			<Order val="1550"/>
+		</TestOption>
+		<TestOption val="1310/1625">
+			<Order val="1310"/>
+			<Order val="1625"/>
+		</TestOption>
+		<TestOption val="1550/1625">
+			<Order val="1550"/>
+			<Order val="1625"/>
+		</TestOption>
+		<TestOption val="1310/1550/1625">
+			<Order val="1310"/>
+			<Order val="1550"/>
+			<Order val="1625"/>
+		</TestOption>
+	</TestOptions>
+	<!--Default Average Time values used on a per range basis, to override implement in Range element-->
+	<AveragingTimes>
+		<AveragingTime val="5"/>
+		<AveragingTime val="10"/>
+		<AveragingTime val="30"/>
+		<AveragingTime val="60"/>
+		<AveragingTime val="90"/>
+		<AveragingTime val="180"/>
+	</AveragingTimes>
+	<!--Wavelength contains the nominal wavelength value, the fiber type,
+		the hardware laser key, the initial range, the UI color to associate, and the acquisition offset-->
+	<Wavelength val="1310" type="Singlemode" laserEnable="0" range="16000" color="FF0000" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-79.6" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.46777" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="3000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="128000" pw="10000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="256000" pw="20000" avgTime="90" NumDataPoints="16000">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+	<Wavelength val="1550" type="Singlemode" laserEnable="1" range="16000" color="0000FF" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-82.0" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.4682" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="3000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="128000" pw="10000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="256000" pw="20000" avgTime="90" NumDataPoints="16000">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+	<Wavelength val="1625" type="Singlemode" laserEnable="12" range="16000" color="339900" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-83.0" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.4690" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="3000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="128000" pw="10000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="256000" pw="20000" avgTime="90" NumDataPoints="16000">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+	<Wavelength val="1650" type="Singlemode" laserEnable="13" range="16000" color="CC00CC" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-83.0" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.4690" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="2" apdGain="0"/>
+					<PulseWidth val="20000" gainLevel="2" apdGain="0"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="3000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="128000" pw="10000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+			<Range val="256000" pw="20000" avgTime="90" NumDataPoints="16000">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="3" apdGain="1"/>
+					<PulseWidth val="3000" gainLevel="2" apdGain="1"/>
+					<PulseWidth val="10000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+					<PulseWidth val="20000" gainLevel="V2" apdGain="0">
+						<GainInfo gainLevel="2" AveragingBlocks="4" apdGain="0"/>
+						<GainInfo gainLevel="1" AveragingBlocks="1" apdGain="0"/>
+						<GainInfo gainLevel="4" AveragingBlocks="0" apdGain="1"/>
+					</PulseWidth>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+	<Wavelength val="850" type="Multimode" laserEnable="2" range="16000" color="FF0000" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-68.0" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.496" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="1000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+	<Wavelength val="1300" type="Multimode" laserEnable="3" range="32000" color="0000FF" acqOffset="0">
+		<!--Each Range contains a set of PulseWidth (with corresponding Gain Level) and a set of Average times -->
+		<BC val="-76.0" min="-90" max="-40" incr=".1" dec="1"/>
+		<GIR val="1.491" min="1.4" max="1.6" incr=".0001" dec="4"/>
+		<Ranges>
+			<Range val="250" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="500" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="1000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="2000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="4000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="8000" pw="100" avgTime="10">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="16000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="32000" pw="1000" avgTime="30">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+			<Range val="64000" pw="1000" avgTime="60">
+				<PulseWidths>
+					<PulseWidth val="5" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="10" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="30" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="100" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="300" gainLevel="9" apdGain="1"/>
+					<PulseWidth val="1000" gainLevel="9" apdGain="1"/>
+				</PulseWidths>
+			</Range>
+		</Ranges>
+		<!--The following are not yet implemented-->
+		<!--Additional thresholds to follow-->
+		<EventEnd val="3.0" min="1.0" max="25" incr=".1" dec="1"/>
+		<EventLoss val="0.1" min="0.05" max="1.0" incr=".1" dec="1"/>
+		<EventRefl val="-65" min="-65" max="-35" incr=".1" dec="1"/>
+		<PassEventLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventLossNonRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassEventRefl val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<PassLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MargLinkLoss val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+		<MarginalLinkORL val="-35" min="-65" max="-20" incr=".1" dec="1"/>
+	</Wavelength>
+</Setup>

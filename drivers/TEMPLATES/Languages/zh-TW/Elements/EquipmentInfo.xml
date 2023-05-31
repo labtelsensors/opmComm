@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Content" Alignment="Top"  >
+			<Div Positioning="Content" Alignment="Top" >
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="主機型號: 
+" ID="0" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.MainModel.Length!=0"/>
+						<Data DataSource="OPMInfo" Field="MainModel" FontSize="12" Conditional="OPMInfo.MainModel.Length!=0"/>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="主要序號:" ID="1" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.MainSerialNumber.Length!=0"/>
+						<Data DataSource="OPMInfo" Field="MainSerialNumber" FontSize="12" Conditional="OPMInfo.MainSerialNumber.Length!=0"/>
+					</Div>
+					<Div Positioning="Content" Alignment="Top"  >
+						<Label Text="主要校準日期:" ID="2" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.MainCalDate.IsValidDate=True"/>
+						<Data DataSource="OPMInfo" Field="MainCalDate" FontSize="12" Format="Short" Conditional="OPMInfo.MainCalDate.IsValidDate=True"/>
+					</Div>
+				</Div>
+				<Div Positioning="Percentage" Alignment="Left" Width="50">
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="遠端機型號:" ID="3" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.RemoteModel.Length!=0"/>
+						<Data DataSource="OPMInfo" Field="RemoteModel" FontSize="12" Conditional="OPMInfo.RemoteModel.Length!=0"/>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="遠端序列號: 
+" ID="4" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.RemoteSerialNumber.Length!=0" />
+						<Data DataSource="OPMInfo" Field="RemoteSerialNumber" FontSize="12" Conditional="OPMInfo.RemoteSerialNumber.Length!=0"/>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Label Text="遠端校準日期: 
+" ID="5" Positioning="Percentage" Width="50" FontSize="12" Conditional="OPMInfo.RemoteCalDate.IsValidDate=True"/>
+						<Data DataSource="OPMInfo" Field="RemoteCalDate" FontSize="12" Format="Short" Conditional="OPMInfo.RemoteCalDate.IsValidDate=True"/>
+					</Div>
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

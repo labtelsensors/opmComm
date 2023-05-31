@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<Filename>OTDR Summary w Thumbnails.xml</Filename>
+			<HelpText>길이, OTDR 요약 페이지에서 정보를 보여줍니다 
+링크 손실 및 링크 ORL. 이벤트지도가 포함됩니다. 
+흔적없이 케이블, 케이블 요약하여 보여줍니다.</HelpText>
+			<Description>케이블 요약 표 승 미리보기 성분 케이블</Description>
+		</PageSettings>
+		<Div Section="CoverPage" RenderOption="OncePerCable" Order="3" Padding="40,40,40,40" >
+
+			<Div Conditional ="HasTrace AND OTDRInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,10">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,30,20,10" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,20,10,10" >
+									<Label Text="케이블 요약" ID="0" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,5" >
+									<Label Text="케이블 자료 ID :" ID="1" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OTDRInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="10" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+				</Div>
+
+				<Template FileName="Fiber Optic Report Block no Fiber.xml" Alignment="HorizCenter" Padding="0,10,0,10"/>
+
+				<Div Alignment="Top" Positioning="Content" Padding="2,10,2,2" >
+					<Label Text="OTDR 요약" ID="2" FontSize="16"/>
+				</Div>
+
+				<Div RequiredElement="False" Alignment="Top" Padding="2,2,2,2" Positioning="Content">
+					<Label Text="길이" ID="3" FontSize="12"/>
+					<Data DataSource="OTDRInfo" Index="0" Field="LinkLength" FontSize="12"/>
+					<Data DataSource="OTDRInfo" Index="0" Field="DistanceUnits" FontSize="12"/>
+				</Div>
+				<OTDRLossTable Alignment="Top" Format="0.00" Padding="5,5,5,5"/>
+				<TraceSummary Positioning="Content" Alignment="Top" Height="5" Padding="10,10,10,10" X2="10" />
+			</Div>
+
+			<Div Conditional="HasNoTrace AND OPMInfo.CableID.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" Padding="0,0,0,20">
+					<Div Positioning="Percentage" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" >
+
+						<Div Positioning="Content" Alignment="HorizCenter" Padding="20,30,20,10" >
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,20,10,10" >
+									<Label Text="케이블 요약" ID="4" FontSize="24" Alignment="VertCenter" />
+								</Div>
+							</Div>
+
+							<Div Positioning="Content" Alignment="Top" Width="100" >
+								<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,5" >
+									<Label Text="케이블 자료 ID :" ID="5" Alignment="Left" Positioning="Percentage" Width="15" FontSize="20"/>
+									<Data DataSource="OPMInfo" Field="CableID" FontSize="20" Alignment="Left" />
+								</Div>
+							</Div>
+
+						</Div>
+            <Div Positioning="Percentage" Alignment="Top"  Height="5" Padding="3,3,3,3" >
+              <ImageElement FileName="AflLogo.png" Positioning="Percentage" Alignment="Right" Sizing="FixedAspect" Width="10" Padding="5,5,5,5" />
+            </Div>
+					</Div>
+				</Div>
+
+				<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+					<Div Alignment="Center" Positioning="Content" Width="80" Padding="20,20,20,20" >
+
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="OLTS / OPM 검색 결과 :" ID="6" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMCount" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="파장 테스트 :" ID="7" Width="50" FontSize="20" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+							<Data Alignment="Left" DataSource="Cable" Field="OPMWavelengths" FontSize="20" />
+						</Div>
+						<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+							<Label Alignment="Left" Positioning="Percentage" Text="인증 결과를 포함" ID="8" Width="50" FontSize="20" Conditional="Cable.HasATResults=True" />
+							<Div Alignment="Left" Positioning="Percentage" Width="15" />
+						</Div>
+
+					</Div>
+				</Div>
+
+			</Div>
+		</Div>
+
+	</Body>
+</Template>

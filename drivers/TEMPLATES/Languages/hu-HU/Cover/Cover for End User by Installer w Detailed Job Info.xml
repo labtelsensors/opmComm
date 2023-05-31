@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Magában foglalja a Végfelhasználói, részletes információk Állás, és az alapvető telepítő és Tanácsadó információ. 
+Ha az információ megjelenik, hogy nem kívánatos, beleértve a logókat, hagyja üresen és / vagy az un - ellenőrizze az egyes tételek.</HelpText>
+			<Description>Jelentés Fedél End User által Installer, részletes információk Állás</Description>
+		</PageSettings>
+
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="0" Padding="40,40,40,40">
+
+			<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.ProjectJobName.Length>0 OR JobClass.Name.Length>0" >
+				<Div Positioning="Content" Alignment="Center" Width="80" MaxHeight="20" Padding="10,10,10,10" >
+					<Data DataSource="Settings" Field="ProjectJobName" Alignment="Center" Wrap="True" FontSize="24" Conditional="Settings.ProjectJobName.Length>0"/>
+					<Data DataSource="JobClass" Field="Name" Alignment="Center" Wrap="True" FontSize="24" Conditional="Settings.ProjectJobName.Length=0 AND JobClass.Name.Length>0"/>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True">
+				<Data Alignment="Center" DataSource="Settings" Field="CustomerSectionTitle" FontSize="15" />
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="10,10,10,10" BorderStyle="OuterRadius" Forecolor="LightGray" Conditional="Settings.IncludeCustomerInfo=True OR Settings.IncludeCustomerLogoInfo=True" >
+				<Div Positioning="Content" Alignment="Center" Padding="10,10,10,10">
+					<Template FileName="Customer.xml" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Padding="0,40,0,0" Conditional="Settings.ProjectJobDescription.Length>0 OR Settings.ProjectTestPhase.Length>0 OR Settings.ProjectAwardDateChecked=True OR Settings.ProjectJobCompletionDateChecked=True OR Settings.ProjectDatePreparedChecked=True OR Settings.ProjectManager.Length>0 OR Settings.ProjectContractPONumber.Length>0 OR Settings.ProjectPreparedBy.Length>0">
+				<Div Positioning="Content" Alignment="Top" Width="100" Padding="10,10,10,10" BorderStyle="OuterRadius" Forecolor="LightGray"  >
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10" >
+						<Template FileName="ProjectInfo.xml" />
+					</Div>
+				</Div>
+			</Div>
+			
+			<Div Positioning="Percentage" Alignment="Bottom" Height="6" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+				<Div Positioning="Percentage" Alignment="HorizCenter" Width="100" Padding="10,10,10,10">
+					<Template FileName="AFLNoyesBlock.xml" Padding="5,5,5,5" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludeAcceptanceSignature=True">
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray">
+					<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10">
+						<Template FileName="Acceptance Signature Block.xml" />
+					</Div>
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True">
+				<Div Positioning="Content" Alignment="Top" Conditional="Settings.PreparerSectionTitle.Length>0">
+					<Data Alignment="Left" DataSource="Settings" Field="PreparerSectionTitle" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" Width="100" BorderStyle="OuterRadius" Forecolor="LightGray" Padding="10,10,10,10" Conditional="Settings.IncludePreparerInfo=True OR Settings.IncludePreparerLogoInfo=True">
+					<Div Positioning="Content" Alignment="HorizCenter" Padding="10,10,10,10">
+						<Template FileName="Preparer-TopLogo.xml" Alignment="VertCenter" />
+					</Div>
+				</Div>
+			</Div>
+
+		</Div>
+	</Body>
+</Template>
+

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<PageSettings>
+		<Padding>40,40,40,40</Padding>
+		<Positioning>Absolute</Positioning>
+		<BackColor>255,255,255</BackColor>
+		<Border>None</Border>
+	</PageSettings>
+	<Body>
+		<Div Section="CoverPage" RenderOption="OncePerReport" Order="0" Width="100" >
+
+			<Div Positioning="Content" Alignment="Top" Width="100" Padding="0,10,0,0" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Content" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+						<Div Positioning="Percentage" Alignment="Left" Width="80" Padding="10,10,10,10" Backcolor="Aqua" >
+							<Template FileName="ProjectSummary.xml"  />
+						</Div>
+					</Div>
+				</Div>
+
+			</Div>
+
+
+			<Div Positioning="Content" Alignment="VertCenter" Width="100" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Content" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+						<Div Positioning="Percentage" Alignment="HorizCenter" Width="80" Padding="10,10,10,10" Backcolor="Aqua" >
+							<Template FileName="ProjectSumamry.xml"  />
+						</Div>
+					</Div>
+				</Div>
+
+			</Div>
+
+			<Div Positioning="Content" Alignment="Bottom" Width="100" Padding="0,10,0,0" Conditional="Settings.ProjectJobName.Length>0 OR Conditional=Settings.ProjectJobDescription.Length>0">
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Label Text="Project Information: " Alignment="Left" FontSize="15" />
+				</Div>
+
+				<Div Positioning="Content" Alignment="Top" >
+					<Div Positioning="Content" Alignment="Left" Width="100" BorderStyle="OuterRadius" Forecolor="Black" Backcolor="Yellow" >
+						<Div Positioning="Percentage" Alignment="Right" Width="80" Padding="10,10,10,10" Backcolor="Aqua" >
+							<Template FileName="ProjectSummary.xml"  />
+						</Div>
+					</Div>
+				</Div>
+
+			</Div>
+
+
+		</Div>
+	</Body>
+</Template>

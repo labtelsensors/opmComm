@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+	<Rule Name="Token Ring-62.5"		
+		  TestPort="Multimode"		
+		  Units="dB"		
+		  LossThreshType="TotalLoss"		
+		  Description="Token Ring 4/16 (850nm) 62.5μm fiber."
+		  CatType="Other"
+		  FTA="OM1_62_5_125um"
+		  StdType="Application" Version="1.0.0">
+		<LossThreshold WL="850" 
+					   Min="0" 
+					   Max="8.3"></LossThreshold>
+		<MaxLength Units="Meters">2000</MaxLength>
+	</Rule>
+</Rules>

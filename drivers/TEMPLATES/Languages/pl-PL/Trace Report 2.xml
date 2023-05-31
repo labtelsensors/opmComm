@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Pełny rozmiar wykresu OTDR z głównych fal i innych długościach fali dla włókna badania wykazały dla porównania. Tabela Wydarzenie Główne fali są wyświetlane pod wykresem. Raport ten generuje strony dla każdej długości fali dla każdego włókna.</HelpText>
+		</PageSettings>
+
+		<Template FileName="HeaderFooter.xml" />
+		<Template FileName="OTDR Fiber Report Block.xml" />
+		<Template FileName="OTDR Graph.xml" />
+		<Template FileName="OTDR Event Table.xml" />
+		<Template FileName="Trace Summary.xml" />
+		<Template FileName="Single Event Map.xml" />
+	</Body>
+</Template>

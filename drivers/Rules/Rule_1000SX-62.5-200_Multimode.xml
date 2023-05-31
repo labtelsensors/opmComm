@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:noNamespaceSchemaLocation="RuleSchema.xsd">
+  <Rule Name="1000SX-62.5-200" 
+		TestPort="Multimode" 
+		Units="dB" 
+		LossThreshType="TotalLoss" 
+		Description="1000SX-62.5-200 (850 nm) on (OM1) 62.5 μm fiber" 
+		CatType="Ethernet"
+		FTA="OM1_62_5_125um"
+		StdType="Application" Version="1.0.0">
+	<LossThreshold WL="850" 
+				   Min="0" 
+				   Max="2.60"></LossThreshold>
+	<MaxLength Units="Meters">275</MaxLength>
+  </Rule>
+</Rules>

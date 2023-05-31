@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Width="100" Height="100" Conditional="Settings.IncludeConsultantLogoInfo=True OR Settings.IncludeConsultantInfo=True">
+
+			<Div Positioning="Content" Alignment="Left" Width="33" Padding="0,0,5,0" Conditional="Settings.IncludeConsultantLogoInfo=True">
+				<Div Positioning="Content" Alignment="VertCenter" Width="100" >
+					<ImageElement FileName="ConsultantLogo" Alignment="Right" MaxWidth="100" MaxHeight="100" Sizing="FixedAspect" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Left" Width="66" Conditional="Settings.IncludeConsultantInfo=True" >
+				<Div Positioning="Content" Alignment="VertCenter" Width="100">
+					<Div Positioning="Content" Alignment="Top" Width="100" >
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantCompanyName" Width="100" Wrap="True" FontSize="20" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" Width="100" >
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantAddress" Width="100" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" Width="100" >
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantCity" FontSize="12" />
+						<Label Alignment="Left" Text=", " FontSize="12" Conditional="Settings.ConsultantCity=True AND Settings.ConsultantState=True"/>
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantState" FontSize="12" />
+						<Label Alignment="Left" Text=" " FontSize="12" />
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantPostalCode" FontSize="12" />
+						<Label Alignment="Left" Text=" " FontSize="12" />
+						<Data Alignment="Left" DataSource="Settings" Field="ConsultantCountry" FontSize="12" />
+					</Div>
+
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

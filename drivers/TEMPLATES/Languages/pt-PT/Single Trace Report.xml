@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>10,10,10,10</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<Border>None</Border>
+			<HelpText>Full gráfico OTDR tamanho com comprimento de onda principal e outros comprimentos de onda da fibra teste mostrado para comparação. A tabela de eventos do comprimento de onda principal é exibida abaixo do gráfico. Este relatório gera uma página para cada comprimento de onda para cada fibra.</HelpText>
+		</PageSettings>
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|AZ" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single OTDR Graph.xml" />
+			<Template FileName="Trace Summary.xml" />
+			<Template FileName="OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="SingleMode|ZA" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single OTDR Graph.xml" />
+			<Template FileName="Trace Summary.xml" />
+			<Template FileName="OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="MultiMode|AZ" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single OTDR Graph.xml" />
+			<Template FileName="Trace Summary.xml" />
+			<Template FileName="OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+		<PageBreak />
+		<Template FileName="HeaderFooter.xml" />
+		<Foreach Section="MultiMode|ZA" Parameters="Wavelength" Increment="1">
+			<Template FileName="OTDR Fiber Report Block.xml" />
+			<Template FileName="Single OTDR Graph.xml" />
+			<Template FileName="Trace Summary.xml" />
+			<Template FileName="OTDR Events.xml" />
+			<Template FileName="Single Event Map.xml" />
+			<PageBreak />
+		</Foreach>
+	</Body>
+</Template>

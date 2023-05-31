@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Alignment="Top" Positioning="Content" >
+			<Label Alignment="Left" Text="Resultados:" ID="0" FontSize="24" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" >
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Rotas:" ID="1"  Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="RouteCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+					<Label Alignment="Left" Text=" -"  FontSize="20" />
+					<Data Alignment="Left" DataSource="User" Field="RouteCountWithData" FontSize="20" />
+					<Label Alignment="Left" Text="com os resultados" ID="2"  FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Cabos:" ID="3" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="CableCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+					<Label Alignment="Left" Text=" -"  FontSize="20" />
+					<Data Alignment="Left" DataSource="User" Field="CableCountWithData" FontSize="20" />
+					<Label Alignment="Left" Text="com os resultados" ID="4"  FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Fibras:" ID="5" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="FiberCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Traces:" ID="6" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="TraceCount" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Traços Monomodo:" ID="7" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Traços Multimode:" ID="8" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="OLTs / Resultados OPM:" ID="10" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSOPMResults" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Fibra Leituras OLTs:" ID="11" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSFibers" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Fibra Leituras OPM:" ID="12" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OPMFibers" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Traços desconhecido:" ID="9" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="Images" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Comprimentos de onda monomodo Testado:" ID="13" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Comprimentos de onda Multimode Testado:" ID="14" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+
+		</Div>
+
+	</Body>
+</Template>

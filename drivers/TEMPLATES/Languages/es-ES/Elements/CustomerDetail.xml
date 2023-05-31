@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+
+		<Div Positioning="Content" Alignment="Top" Padding="10,10,10,10" Conditional="Settings.IncludeCustomerLogoInfo=True OR Settings.IncludeCustomerInfo=True" >
+
+			<Div Positioning="Content" Alignment="Top" Conditional="Settings.IncludeCustomerLogoInfo=True" >
+				<ImageElement FileName="CustomerLogo" Alignment="Center" MaxWidth="50" MaxHeight="50" Sizing="FixedAspect" />
+			</Div>
+
+			<Div Positioning="Content" Alignment="Top" Conditional="Settings.IncludeCustomerInfo=True" >
+				<Div Positioning="Content" Alignment="Center">
+
+					<Div Positioning="Content" Alignment="Top" >
+						<Data DataSource="Settings" Field="CustomerCompanyName" FontSize="20" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top">
+						<Data DataSource="Settings" Field="CustomerAddress" FontSize="15" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top">
+						<Data Alignment="Left" DataSource="Settings" Field="CustomerCity" FontSize="15" />
+						<Label Alignment="Left" Text=", " FontSize="15" Conditional="Settings.CustomerCity=True AND Settings.CustomerState=True"/>
+						<Data Alignment="Left" DataSource="Settings" Field="CustomerState" FontSize="15" />
+						<Label Alignment="Left" Text=" " FontSize="15" />
+						<Data Alignment="Left" DataSource="Settings" Field="CustomerPostalCode" FontSize="15" />
+						<Label Alignment="Left" Text=" " FontSize="15" />
+						<Data Alignment="Left" DataSource="Settings" Field="CustomerCountry" FontSize="15" />
+					</Div>
+
+					<Div Positioning="Content" Alignment="Top" >
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.CustomerContact.Length>0">
+							<Label Positioning="Percentage" Text="Contacto:" ID="0" Width="10" FontSize="15" />
+							<Data DataSource="Settings" Field="CustomerContact" FontSize="15" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.CustomerPhone.Length>0">
+							<Label Positioning="Percentage" Text="Teléfono:" ID="1" FontSize="15" Width="10" />
+							<Data DataSource="Settings" Field="CustomerPhone" FontSize="15" />
+						</Div>
+
+						<Div Positioning="Content" Alignment="Top" Conditional="Settings.CustomerEmail.Length>0">
+							<Label Positioning="Percentage" Text="Correo:" ID="2"  Width="10" FontSize="15" />
+							<Data DataSource="Settings" Field="CustomerEmail" FontSize="15" />
+						</Div>
+
+					</Div>
+
+				</Div>
+
+			</Div>
+
+		</Div>
+
+	</Body>
+
+</Template>

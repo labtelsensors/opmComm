@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<PageSettings>
+			<Padding>40,40,40,40</Padding>
+			<Positioning>Absolute</Positioning>
+			<BackColor>255,255,255</BackColor>
+			<BorderStyle>Radius</BorderStyle>
+		</PageSettings>
+		<Div Alignment="Top" Positioning="Percentage" Height="10" Padding="0,20,0,0">
+			<Label Alignment="HorizCenter" Text="Útvonal összefoglaló" ID="0" FontSize="36" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="0,20,0,0" >
+			<Label Alignment="Left" Text="Eredmények:" ID="1" FontSize="24" />
+		</Div>
+
+		<Div Alignment="Top" Positioning="Content" Padding="20,20,0,0" >
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Kábelek:" ID="2" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="CableCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+					<Label Alignment="Left" Text=" -"  FontSize="20" />
+					<Data Alignment="Left" DataSource="User" Field="CableCountWithData" FontSize="20" />
+					<Label Alignment="Left" Text="az eredmények" ID="3"  FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Szálak:" ID="4" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="FiberCount" FontSize="20" />
+				</Div>
+				<Div Alignment="Left" Positioning="Fill">
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Nyomok:" ID="5" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="TraceCount" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Singlemode nyomai:" ID="6" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Többmódusú Nyomokban:" ID="7" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeTraces" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="OLTS / OPM Eredmények:" ID="9" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSOPMResults" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="OLTS Fiber mért értékek:" ID="10" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OLTSFibers" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="OPM Fiber mért értékek:" ID="11" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="OPMFibers" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Ismeretlen nyomai:" ID="9" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="10">
+					<Data Alignment="Right" DataSource="User" Field="Images" FontSize="20" />
+				</Div>
+			</Div>
+
+			<Div Alignment="Top" Positioning="Content" Padding="0,10,0,0">
+				<Label Alignment="Left" Positioning="Percentage" Text="Singlemode hullámhossza Tesztelt:" ID="12" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="SingleModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+			<Div Alignment="Top" Positioning="Content">
+				<Label Alignment="Left" Positioning="Percentage" Text="Többmódusú hullámhossza Tesztelt:" ID="13" Width="50" FontSize="20" />
+				<Div Alignment="Left" Positioning="Percentage" Width="20">
+					<Data Alignment="Right" DataSource="User" Field="MultiModeWaveLengths" FontSize="20" />
+				</Div>
+			</Div>
+		</Div>
+	</Body>
+</Template>

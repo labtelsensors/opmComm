@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div Positioning="Percentage" Alignment="Top" Conditional="Settings.IncludePreparerLogoInfo=True OR Settings.IncludePreparerInfo=True">
+
+			<Div Positioning="Content" Alignment="Left" Width="50" Padding="0,0,5,0" Conditional="Settings.IncludePreparerLogoInfo=True">
+				<Div Positioning="Content" Alignment="Center" >
+					<ImageElement FileName="PreparerLogo" Alignment="Right" MaxWidth="100" MaxHeight="100" Sizing="FixedAspect" />
+				</Div>
+			</Div>
+
+			<Div Positioning="Content" Alignment="Left" Width="66" MaxHeight="50" Conditional="Settings.IncludePreparerInfo=True" >
+				<Div Positioning="Content" Alignment="Center" >
+					<Div Positioning="Content" Alignment="Top" >
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerCompanyName" Wrap="True" FontSize="20" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerAddress" FontSize="12" />
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerCity" FontSize="12" />
+						<Label Alignment="Left" Text=", " FontSize="12" Conditional="Settings.PreparerCity=True AND Settings.PreparerState=True"/>
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerState" FontSize="12" />
+						<Label Alignment="Left" Text=" " FontSize="12" />
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerPostalCode" FontSize="12" />
+						<Label Alignment="Left" Text=" " FontSize="12" />
+						<Data Alignment="Left" DataSource="Settings" Field="PreparerCountry" FontSize="12" />
+					</Div>
+
+				</Div>
+			</Div>
+		</Div>
+
+	</Body>
+</Template>

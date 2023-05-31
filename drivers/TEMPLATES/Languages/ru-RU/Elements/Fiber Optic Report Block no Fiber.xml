@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template version="1.0.0.0">
+	<Body>
+		<Div RequiredElement="False" Positioning="Percentage" Alignment="Top" Height="8" Padding="5,5,5,5">
+			<Div Name="Fiber Optic Report Block" Positioning="Content" Padding="5,5,5,5">
+				
+				<Div Positioning="Percentage" Alignment="Left" Width="35">
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="ИД кабеля:" ID="0" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="CableID" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Конец 1:" ID="1" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndOneSite" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Конец 2:" ID="2" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndTwoSite" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Дата тестирования:" ID="3" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="TimeStamp" FontSize="10" />
+						</Div>
+					</Div>
+				</Div>
+				
+				<Div Positioning="Percentage" Alignment="Left" Width="35">
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="Тестировал:" ID="4" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="Operator" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="Буферный кабель:" ID="5" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDREnum" Index="0" Field="LaunchCableType" FontSize="10" />
+							<Div Positioning="Content" Conditional="OTDREnum.LaunchCableType=User">
+								<Label Text="(" FontSize="10"/>
+								<Data DataSource="OTDRInfo" Index="0" Field="UserOffset" FontSize="10" />
+								<Data DataSource="Settings" Field="DistanceUnits" FontSize="10" />
+								<Label Text=")" FontSize="10"/>
+							</Div>
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="“Хвост” кабеля:" ID="6" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDREnum" Index="0" Field="ReceiveCableType" FontSize="10" />
+							<Div Positioning="Content" Conditional="OTDREnum.ReceiveCableType=User">
+								<Label Text="(" FontSize="10"/>
+								<Data DataSource="OTDRInfo" Index="0" Field="ReceiveCableLength" FontSize="10" />
+								<Data DataSource="Settings" Field="DistanceUnits" FontSize="10" />
+								<Label Text=")" FontSize="10"/>
+							</Div>
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="Показ. преломл.:" ID="7" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="IOR" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="45">
+							<Label Text="Коэфф. обр. расс.:" ID="8" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="BackscatterCoef" FontSize="10" />
+							<Label Text="dB" ID="9" Alignment="Left" FontSize="10" />
+						</Div>
+					</Div>
+				</Div>
+				
+				<Div Positioning="Fill" Alignment="Left" Width="30">
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Установки рефлектометра:" ID="10" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="TestMode" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Порог конца:" ID="11" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="EndThreshold" FontSize="10" />
+							<Label Text="dB" ID="12" Alignment="Left" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Порог потерь:" ID="13" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="LossThreshold" FontSize="10" />
+							<Label Text="dB" ID="14" Alignment="Left" FontSize="10" />
+						</Div>
+					</Div>
+					<Div Positioning="Content" Alignment="Top" >
+						<Div Positioning="Percentage" Alignment="Left" Width="42">
+							<Label Text="Порог отражения:" ID="15" Alignment="Left" FontSize="10" />
+						</Div>
+						<Div Positioning="Fill" Alignment="Left" >
+							<Data DataSource="OTDRInfo" Index="0" Field="ReflThreshold" FontSize="10" />
+							<Label Text="dB" ID="16" Alignment="Left" FontSize="10" />
+						</Div>
+					</Div>
+				</Div>
+				
+			</Div>
+		</Div>
+	</Body>
+</Template>
