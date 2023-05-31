@@ -13,7 +13,7 @@ The drivers of OPM4 and OPM5 can be found in './drivers'. In addition, it is nec
 
 ## Code Description
 
-The code reads the optical power measured by an OPM4 or OPM 5 (AFL Telecommunications LLC, Spartanburg, USA) continuously and write them to a file.
+'./scr/main.py' reads the optical power measured by an OPM4 or OPM 5 (AFL Telecommunications LLC, Spartanburg, USA) continuously and write it to a text file.
 
 ## Future Work
 
