@@ -10,7 +10,7 @@
 
 ## Installation
 
-The drivers of OPM4 and OPM5 can be found in '/drivers'. In addition, it is necessary to install the pySerial library, whose installation procedure can be found [here](https://pyserial.readthedocs.io/en/latest/pyserial.html). After that, the code should run with no issues using the Anaconda distribution of Python.
+The drivers of OPM4 and OPM5 can be found in './drivers'. In addition, it is necessary to install the pySerial library, whose installation procedure can be found [here](https://pyserial.readthedocs.io/en/latest/pyserial.html). After that, the code should run with no issues using the Anaconda distribution of Python.
 
 ## Code Description
 
