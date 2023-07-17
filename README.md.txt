@@ -20,12 +20,9 @@ The code reads the optical power measured by an OPM4 or OPM 5 (AFL Telecommunica
 
 TODO list:
 1. Get serial port name automatically
-2. Instantiate two serial objects
-3. Threading for read both objects and update text file
-4. Sincronize threads using an event and a callback function
-5. Create class with all OPM commands
-6. Get measurement from string and plot results
-7. Create button to stop measurements and close serial port and text file.
+2. Create class with all OPM commands
+3. Get measurement from string and plot results
+4. Threading for read two serial objects and update text file (MUST BE IN C++ - Python uses GIL and cannot perform I/O during multiprocessing)
  
 Feel free to push your contributions to our repository!
 
